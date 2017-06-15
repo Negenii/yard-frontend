@@ -5,25 +5,36 @@
     <meta charset="UTF-8">
     <link rel="stylesheet" href="normalize.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flexboxgrid/6.3.1/flexboxgrid.min.css" type="text/css" >
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Fira+Sans:300,400,700">
     <link rel="stylesheet" href="style.css" >
   </head>
   <body>
     <header class="header">
-      <img src="images/compass-logo.svg" alt="compass-logo" class="header-logo">
-      <nav class="top-menu">
-        <a href="#">Buy</a>
-        <a href="#">Rent</a>
-        <a href="#">Our Agents</a>
-      </nav>
+      <div class="container">
+        <div class="row between-xs middle-xs">
+          <div class="col-xs">
+            <img src="images/compass-logo.svg" alt="compass-logo" class="header-logo">
+          </div>
+            <div class="col-xs">
+              <nav class="header-nav">
+              <a href="#">Buy</a>
+              <a href="#">Rent</a>
+              <a href="#">Our Agents</a>
+            </nav>
+          </div>
+        </div>
+      </div>
     </header>
     <section class="banner">
       <img src="images/compass-development-logo.svg" alt="">
     </section>
-    <section class="welcome-text row center-xs">
-      <div class="col-xs-8">
-        <h2>Discover Our New Developments</h2>
-        <p>Compass brings a modern approach to new development marketing and sales. From boutique rental conversions to luxurious ground-up condominiums, browse our portfolio of current offerings.</p>
-        <button type="button" name="contact" class="black-button">Contact The Team</button>
+    <section class="container">
+      <div class="row center-xs">
+        <div class="banner-text col-xs-8">
+          <h2>Discover Our New Developments</h2>
+          <p>Compass brings a modern approach to new development marketing and sales. From boutique rental conversions to luxurious ground-up condominiums, browse our portfolio of current offerings.</p>
+          <button type="button" name="contact" class="banner-black-button">Contact The Team</button>
+        </div>
       </div>
     </section>
     <section class="complexes-blocks">
