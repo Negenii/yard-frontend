@@ -1,8 +1,15 @@
+
 html{
   font-size: 100%;
 }
-
+h4{
+  font-family: 'Fira Sans', sans-serif;
+  font-size: .8rem;
+  font-weight: bold;
+  color: #646971;
+}
 body{
+
   background-color: #eaebf0;
   background-image: url('images/background.png');
   background-size: 20px 10px;
@@ -122,4 +129,38 @@ margin-bottom: 1.25rem;
 	color: #3e4247;
   margin-top: 1rem;
   margin-right: 2rem;
+
+.footer{
+  width: 100%;
+  height: auto;
+  background-color: #000;
+  color: #eee;
+  padding-top: 2rem;
+}
+.footer{
+  font-family: 'Fira Sans', sans-serif;
+  font-size: .8rem;
+  color: #a9afb6;
+}
+.footer-hairline{
+  border: 1px solid #3e4247;
+}
+.footer a {
+  display: block;
+  font-family: 'Fira Sans', sans-serif;
+  font-weight: 300;
+  color: #fff;
+  text-decoration: none;
+  margin-top: 1rem;
+}
+.right-arrow::after{
+  content: url('images/right-arrow.svg');
+  margin-left: .5rem;
+}
+.disclamer{
+  font-family: 'Fira Sans', sans-serif;
+  font-weight: 300;
+  font-size: 0.65rem;
+  color: #a9afb6;
+  margin-top: 5.75rem;
 }
