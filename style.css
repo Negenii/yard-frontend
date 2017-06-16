@@ -129,38 +129,50 @@ margin-bottom: 1.25rem;
 	color: #3e4247;
   margin-top: 1rem;
   margin-right: 2rem;
+}
 
 .footer{
   width: 100%;
   height: auto;
   background-color: #000;
-  color: #eee;
   padding-top: 2rem;
-}
-.footer{
+  margin-top: 6rem;
   font-family: 'Fira Sans', sans-serif;
-  font-size: .8rem;
+  font-weight: 300;
+  font-size: 14px;
   color: #a9afb6;
+  padding-bottom: 1.75rem;
+}
+.footer-heading, .footer-phone{
+  margin-top: 1rem;
+}
+.footer-paragraph {
+  margin-top: .5rem;
+  margin-bottom: 0;
 }
 .footer-hairline{
   border: 1px solid #3e4247;
 }
-.footer a {
+.footer-link {
   display: block;
   font-family: 'Fira Sans', sans-serif;
   font-weight: 300;
   color: #fff;
   text-decoration: none;
+  margin-top: .5rem;
+}
+.footer-link-separate{
   margin-top: 1rem;
 }
 .right-arrow::after{
   content: url('images/right-arrow.svg');
   margin-left: .5rem;
 }
-.disclamer{
+.footer-disclamer{
   font-family: 'Fira Sans', sans-serif;
   font-weight: 300;
-  font-size: 0.65rem;
+  font-size: 11px;
+  line-height: 1.5;
   color: #a9afb6;
   margin-top: 5.75rem;
 }
