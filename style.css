@@ -32,6 +32,7 @@ h3{
   justify-content: center;
   width: 100%;
   background-color: #fff;
+  border-bottom: solid 1px #eaebf0;
 }
 
 .header-container{
@@ -122,4 +123,36 @@ margin-bottom: 1.25rem;
 	color: #3e4247;
   margin-top: 1rem;
   margin-right: 2rem;
+}
+.complex-title{
+  display: flex;
+  flex-direction: column;
+  background: #ffffff;
+}
+.complex-title-heading{
+  font-family: Philosopher;
+  font-size: 2rem;
+	font-weight: bold;
+  color: #3e4247;
+  margin-bottom: 0.5rem;
+}
+.complex-title-address{
+  font-family: 'Fira Sans', sans-serif;
+  font-size: 14px;
+	font-weight: 300;
+	line-height: 1.57;
+  margin-top: 0;
+  color: #a9afb6;
+}
+.complex-add-to-favs{
+  border-radius: 2px;
+	border: solid 1px #e0e0e1;
+  background: #fff;
+  font-family: 'Fira Sans', sans-serif;
+	font-size: 10px;
+	font-weight: 300;
+	line-height: 1.0;
+	color: #00779a;
+  padding: 10px;
+  margin-top: 1.5rem;
 }
