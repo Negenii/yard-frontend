@@ -5,25 +5,84 @@
     <meta charset="UTF-8">
     <link rel="stylesheet" href="normalize.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flexboxgrid/6.3.1/flexboxgrid.min.css" type="text/css" >
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Fira+Sans:300,400,700">
     <link rel="stylesheet" href="style.css" >
   </head>
   <body>
     <header class="header">
-      <img src="images/compass-logo.svg" alt="compass-logo" class="header-logo">
-      <nav class="top-menu">
-        <a href="#">Buy</a>
-        <a href="#">Rent</a>
-        <a href="#">Our Agents</a>
-      </nav>
+      <div class="container">
+        <div class="row between-xs middle-xs">
+          <div class="col-xs">
+            <img src="images/compass-logo.svg" alt="compass-logo" class="header-logo">
+          </div>
+          <div class="col-xs">
+            <nav class="header-nav">
+              <a href="#" class="header-nav-link">Снять</a>
+              <a href="#" class="header-nav-link">Купить</a>
+              <a href="#" class="header-nav-link">Наши агенты</a>
+            </nav>
+          </div>
+        </div>
+      </div>
     </header>
     <section class="banner">
       <img src="images/compass-development-logo.svg" alt="">
     </section>
-    <section class="welcome-text row center-xs">
-      <div class="col-xs-8">
-        <h2>Discover Our New Developments</h2>
-        <p>Compass brings a modern approach to new development marketing and sales. From boutique rental conversions to luxurious ground-up condominiums, browse our portfolio of current offerings.</p>
-        <button type="button" name="contact" class="black-button">Contact The Team</button>
+    <section class="banner-text">
+      <div class="container">
+        <div class="row center-xs">
+          <div class="col-xs-8">
+            <h2>Discover Our New Developments</h2>
+            <p>Compass brings a modern approach to new development marketing and sales. From boutique rental conversions to luxurious ground-up condominiums, browse our portfolio of current offerings.</p>
+            <button type="button" name="contact" class="banner-black-button">Contact The Team</button>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="complexes-blocks">
+      <div class="container">
+        <div class="row">
+          <div class="col-xs-12">
+            <a href="#" class="complex-block">
+                <img src="images/complex@3x.png" class="complex-block-image" alt="complex-image">
+                <div class="complex-description">
+                  <p class="complex-description-address">SOUTH BEACH, SAN FRANCISCO</p>
+                  <h3 class="complex-description-title">The Harrison</h3>
+                  <p class="complex-description-info">Beautifully appointed residences perched atop Rincon Hill, The Harrison offers unparalleled Bay Bridge and city views within steps of San Francisco’s greatest restaurants, shops, and The Embarcadero. </p>
+                </div>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="container">
+        <div class="row">
+          <div class="col-xs-12">
+            <a href="#" class="complex-block">
+                <img src="images/appartment-preview2@2x.jpg" class="complex-block-image" alt="complex-image">
+                <div class="complex-description">
+                  <p class="complex-description-address">MIDTOWN EAST, MANHATTAN</p>
+                  <h3 class="complex-description-title">100 East 53rd Street</h3>
+                  <p class="complex-description-info">One Hundred East Fifty Third Street by Foster + Partners is a limited collection of modern residences in Midtown Manhattan's Cultural District. The 94 residences ranging from alcove lofts to four bedrooms within the 63-story tower are generously proportioned. </p>
+                </div>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="container">
+        <div class="row">
+          <div class="col-xs-12">
+            <a href="#" class="complex-block">
+                <img src="images/appartment-preview3@2x.jpg" class="complex-block-image" alt="complex-image">
+                <div class="complex-description">
+                  <p class="complex-description-address">NOLITA, MANHATTAN</p>
+                  <h3 class="complex-description-title">152 Elizabeth</h3>
+                  <p class="complex-description-info">152 Elizabeth is an ultra-luxury condominium building—the first in New York City designed by Japanese master architect Tadao Ando. Located at the corner of Kenmare and Elizabeth Streets in Nolita, the 32,000-square-foot building will stand as a profound architectural statement and embrace the industrial character of the neighborhood.</p>
+                </div>
+            </a>
+          </div>
+        </div>
       </div>
     </section>
   
