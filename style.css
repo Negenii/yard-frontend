@@ -197,12 +197,12 @@ margin-bottom: 1.25rem;
   margin-top: 1rem;
 }
 
-.footer-link-arrow::after{
+.footer-link-arrow:after{
   content: url('images/right-arrow.svg');
   margin-left: .5rem;
 }
 
-.footer-disclamer{
+.footer-disclaimer{
   font-family: 'Fira Sans', sans-serif;
   font-weight: 300;
   font-size: 11px;
