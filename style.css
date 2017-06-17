@@ -156,3 +156,28 @@ margin-bottom: 1.25rem;
   padding: 10px;
   margin-top: 1.5rem;
 }
+.gallery{
+
+}
+
+.gallery-images-wrapper{
+  display: flex;
+  flex-direction: row;
+  overflow: scroll;
+}
+
+.gallery-button-wrapper{
+  margin-top: -4rem;
+}
+
+.gallery-all-photos-btn{
+  border: none;
+border-radius: 2px;
+background-color: #00779a;
+color: #fff;
+line-height: 1;
+font-size: 10px;
+font-weight: 300;
+padding: 8px 16px;
+opacity: 0.8;
+}
