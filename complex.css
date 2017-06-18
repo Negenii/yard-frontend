@@ -130,7 +130,7 @@
 .complex-summary-title,
 .complex-description-title,
 .complex-infrastructure-title {
-  margin-top: 0.5rem;
+  margin-top: 0rem;
   margin-bottom: 0.5rem;
   padding-bottom: 0;
   font-family: 'Philosopher';
@@ -166,7 +166,7 @@
   color: #3e4247;
 }
 .complex-description {
-  padding-top: 0.125rem;
+  padding-top: 0.5rem;
   padding-bottom: 0.125rem;
 }
 
@@ -188,7 +188,7 @@
 }
 
 .complex-infrastructure-items {
-  margin-top: 0.25rem;
+  margin-top: 1rem;
 }
 
 .complex-infrastructure-item {
@@ -219,6 +219,7 @@
   margin-top: 1rem;
   padding-bottom: 1.5rem;
   padding-left: 2rem;
+  padding-right: 2rem;
   padding-top: 1.5rem;
   background-color: #fff;
 }
