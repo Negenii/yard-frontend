@@ -1,0 +1,370 @@
+.complex-heading {
+  display: flex;
+  padding-bottom: 0.7rem;
+  padding-top: 1.5rem;
+  background: #ffffff;
+}
+
+.complex-heading-title {
+  margin-bottom: 0.7rem;
+  margin-top: 0;
+  font-family: Philosopher;
+  font-size: 2rem;
+  font-weight: bold;
+  color: #3e4247;
+}
+
+.complex-heading-address {
+  display: block;
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+  font-family: 'Fira Sans', sans-serif;
+  font-size: 14px;
+  font-weight: 300;
+  color: #a9afb6;
+  line-height: 1.2;
+}
+
+.complex-add-to-favs {
+  display: block;
+}
+
+.add-to-favs-button {
+  padding: 8px 16px;
+  margin-right: .5rem;
+  border-radius: 2px;
+  border: solid 1px #e0e0e1;
+  background: #fff;
+  font-family: 'Fira Sans', sans-serif;
+  font-size: 10px;
+  font-weight: 300;
+  line-height: 1.0;
+  color: #00779a;
+}
+
+.complex-gallery-images-wrapper {
+  display: flex;
+  flex-direction: row;
+  overflow: scroll;
+}
+
+.complex-gallery-button-wrapper {
+  position: absolute;
+  margin-top: -2.625rem;
+}
+
+.complex-gallery-all-photos-btn {
+  padding-top: 0.5rem;
+  padding-left: 1rem;
+  padding-bottom: 0.5rem;
+  padding-right: 1rem;
+  border: none;
+  border-radius: 2px;
+  background-color: #00779a;
+  color: #fff;
+  font-family: 'Fira Sans';
+  line-height: 1;
+  font-size: 10px;
+  font-weight: 300;
+  cursor: pointer;
+}
+
+.complex-info {
+  background: #fff;
+}
+
+.complex-info-titles {
+  display: flex;
+  margin-right: 3rem;
+  margin-bottom: 2.25rem;
+  padding-top: 1rem;
+  border-bottom: 1px solid #e0e0e1;
+}
+
+.complex-info-titles-item {
+  margin-right: 3rem;
+  margin-bottom: 1rem;
+  padding-bottom: 0.25rem;
+}
+
+.complexes-info-title {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 0.5rem;
+  padding-right: 3rem;
+  margin-top: 0.5rem;
+  padding-bottom: 0;
+  font-family: 'Philosopher';
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 1;
+  color: #3e4247;
+}
+.complex-info-title-architect {
+  width: 286px;
+}
+.complex-info-title-subtitle {
+  display: block;
+  padding-top: 1rem;
+  margin-bottom: 0.5rem;
+  font-family: 'Fira Sans';
+  font-size: 14px;
+  font-weight: 300;
+  color: #a9afb6;
+  line-height: 1;
+}
+
+.complex-info-title {
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+  padding-bottom: 0;
+  font-family: 'Philosopher';
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 1;
+  color: #3e4247;
+}
+
+.complex-summary {
+  background: #fff;
+  margin-bottom: 2.5rem;
+}
+
+.complex-summary-wrapper {
+  margin-top: .5rem;
+}
+.complex-description-title-wrapper {
+  margin-top: 0.35em;
+}
+
+.complex-summary-title,
+.complex-description-title,
+.complex-infrastructure-title {
+  margin-top: 0;
+  margin-bottom: 0rem;
+  padding-bottom: 0;
+  font-family: 'Philosopher';
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 1;
+  color: #3e4247;
+}
+
+.complex-summary-summary-item {
+  display: flex;
+  margin-bottom: 0;
+  margin-top: .5rem;
+}
+
+.complex-summary-item-title {
+  margin-top: 0rem;
+  margin-bottom: 0.25em;
+  width: 50%;
+  font-size: 1rem;
+  color: #a9afb6;
+  line-height: 1.4;
+}
+
+.complex-summary-item-value {
+  margin-top: 0rem;
+  margin-bottom: 0.25rem;
+  margin-left: 0;
+  width: 50%;
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 1.4;
+  color: #3e4247;
+}
+.complex-description {
+  padding-top: 0rem;
+  padding-bottom: 0.125rem;
+}
+
+.complex-description-paragraph {
+  margin-top: 0.25rem;
+  margin-bottom: 25px;
+  font-size: 1rem;
+  color: #3e4247;
+  line-height: 25px;
+}
+
+.complex-infrastructure {
+  padding-bottom: 3.5rem;
+}
+
+.complex-infrastructure-wrapper {
+  padding-top: 2rem;
+  border-top: 1px solid #e0e0e1;
+}
+
+.complex-infrastructure-items {
+  margin-top: 1rem;
+}
+
+.complex-infrastructure-item {
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+  line-height: 1.38;
+  color: #3e4247;
+}
+
+.complex-offers {
+  padding-top: 3.75rem;
+  padding-bottom: 4rem;
+  background-color: #f4f5f9;
+}
+
+.complex-offers-title {
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+  padding-bottom: 0;
+  font-family: 'Philosopher';
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 1;
+  color: #3e4247;
+}
+
+.complex-offer-card {
+  margin-top: 1rem;
+  padding-bottom: 1.5rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  padding-top: 1.5rem;
+  background-color: #fff;
+}
+
+.complex-offer-card-title {
+  margin-top: 0;
+  margin-bottom: 1.5rem;
+  font-family: 'Philosopher';
+  font-size: 20px;
+  font-weight: 700;
+  color: #3e4247;
+}
+
+.complex-offer-card-subtitle {
+  margin-top: 0;
+  margin-bottom: 16px;
+  font-family: 'Fira Sans';
+  font-size: 1rem;
+  line-height: 1;
+  color: #a9afb6;
+}
+
+.complex-offer-card-value {
+  padding: 0;
+  margin-top: 0;
+  margin-bottom: 25px;
+  font-family: 'Fira Sans';
+  font-size: 1rem;
+  line-height: 1.38;
+  color: #3e4247;
+}
+.complex-offer-card-button-wrapper {
+  margin-top: 2rem;
+  margin-bottom: 0;
+  text-align: center;
+}
+
+.complex-offer-card-button {
+  padding-top: 12px;
+  padding-left: 2rem;
+  padding-bottom: 12px;
+  padding-right: 2rem;
+  border: 0;
+  border-radius: 0.125rem;
+  font-family: 'Fira Sans', sans-serif;
+  font-size: 1rem;
+  line-height: 1;
+  background-color: #000;
+  color: #fff;
+  cursor: pointer;
+}
+
+.complex-area {
+  padding-top: 4rem;
+  padding-bottom: 13.5rem;
+  background-color: #3e4247;
+}
+
+.complex-area-wrapper {
+  padding-top: 7.25rem;
+}
+.complex-area-title {
+  margin-top: 0;
+  margin-bottom: 3rem;
+  padding-bottom: 0;
+  font-family: 'Philosopher';
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #a9afb6;
+}
+
+.complex-area-paragraph {
+  padding-right: 4rem;
+  margin-bottom: 3.25rem;
+  font-family: 'Philosopher';
+  font-size: 3rem;
+  font-weight: 700;
+  line-height: 1.25;
+  margin-top: 2rem;
+  color: #ffffff;
+}
+
+.complex-area-link {
+  text-decoration: none;
+  font-family: 'Fira Sans';
+  font-size: 1rem;
+  color: #00779a;
+}
+
+.complex-area-image {
+  width: 100%;
+}
+
+.complex-map {
+  margin-top: -9.75rem;
+  padding-bottom: 1.75rem;
+}
+
+.complex-map-image {
+  width: 100%;
+  height: 306px;
+  box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.5);
+}
+
+.complex-map-list {
+  box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.5);
+}
+.complex-map-item {
+  padding-top: 1.5rem;
+  padding-left: 1.5rem;
+  padding-bottom: 1.5rem;
+  background-color: #fff;
+  border-bottom: solid 1px #e0e0e1;
+}
+
+.complex-map-last-item {
+  padding-top: 1.5rem;
+  padding-left: 1.5rem;
+  padding-bottom: 27px;
+  background-color: #fff;
+}
+
+.complex-map-title {
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 1.38;
+  color: #3e4247;
+}
+
+.complex-map-text {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: 1rem;
+  line-height: 1.38;
+  color: #a9afb6;
+}
