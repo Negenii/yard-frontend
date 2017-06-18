@@ -1,7 +1,8 @@
 .complex-title {
   display: flex;
-  flex-direction: column;
   background: #ffffff;
+  padding-bottom: 0.5rem;
+  padding-top: 1.5rem;
 }
 
 .complex-title-heading {
@@ -9,19 +10,27 @@
   font-size: 2rem;
   font-weight: bold;
   color: #3e4247;
-  margin-bottom: 0.5rem;
+  margin-bottom: 1rem;
+  margin-top: 0;
+  line-height: 1;
 }
 
 .complex-title-address {
+  display: block;
+  margin-top: 0;
+  margin-bottom: 0.5rem;
   font-family: 'Fira Sans', sans-serif;
   font-size: 14px;
   font-weight: 300;
-  line-height: 1.57;
-  margin-top: 0;
   color: #a9afb6;
+  line-height: 1.2;
 }
 
 .complex-add-to-favs {
+  display: block;
+}
+
+.add-to-favs-button {
   border-radius: 2px;
   border: solid 1px #e0e0e1;
   background: #fff;
@@ -31,21 +40,21 @@
   line-height: 1.0;
   color: #00779a;
   padding: 8px 16px;
-  margin-top: 1.5rem;
+  margin-right: .5rem;
 }
 
-.gallery-images-wrapper {
+.complex-gallery-images-wrapper {
   display: flex;
   flex-direction: row;
   overflow: scroll;
 }
 
-.gallery-button-wrapper {
+.complex-gallery-button-wrapper {
   position: absolute;
   margin-top: -2.625rem;
 }
 
-.gallery-all-photos-btn {
+.complex-gallery-all-photos-btn {
   border: none;
   border-radius: 2px;
   background-color: #00779a;
@@ -53,42 +62,58 @@
   line-height: 1;
   font-size: 10px;
   font-weight: 300;
-  padding: 8px 16px;
-  opacity: 0.8;
+  padding-top: 0.5rem;
+  padding-left: 1rem;
+  padding-bottom: 0.5rem;
+  padding-right: 1rem;
+  font-family: 'Fira Sans';
+  cursor: pointer;
 }
 
-.summary {
+.complex-info {
   background: #fff;
 }
 
-.summary-headings {
+.complex-info-headings {
   display: flex;
-  flex-direction: row;
+  margin-right: 3rem;
+  margin-bottom: 2.25rem;
+  padding-top: 1rem;
   border-bottom: 1px solid #e0e0e1;
 }
 
-.summary-heading {
-  font-family: Philosopher;
+.complex-info-headings-item {
+  margin-right: 3rem;
+  margin-bottom: 1rem;
+  padding-bottom: 0.25rem;
+}
+
+.complexes-info-heading {
   font-size: 1.5rem;
-  font-weight: bold;
-  color: #3e4247;
   margin-bottom: 0.5rem;
-  line-height: 1.12;
   display: flex;
   flex-direction: column;
   padding-right: 3rem;
-  padding-bottom: 1rem;
+  margin-top: 0.5rem;
+  padding-bottom: 0;
+  font-family: 'Philosopher';
+  font-weight: 700;
+  line-height: 1;
+  color: #3e4247;
 }
 
-.summary-heading-subheading {
+.complex-info-heading-subheading {
+  display: block;
   font-family: 'Fira Sans', sans-serif;
   font-size: 14px;
   font-weight: 300;
   line-height: 1.57;
   color: #a9afb6;
+  padding-top: 1rem;
+  margin-bottom: 0.5rem;
 }
 
-.summary-summaty-heading {
+.complex-info-heading {
   font-family: 'Philosopher';
   font-size: 1.5rem;
   font-weight: 700;
@@ -99,17 +124,81 @@
   padding-bottom: 0;
 }
 
-.summary-summary-wrapper {
+.complex-summary {
+  background: #fff;
+  margin-bottom: 2rem;
+}
+.complex-summary-heading,
+.complex-description-heading,
+.complex-infrastructure-heading {
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+  padding-bottom: 0;
+  font-family: 'Philosopher';
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 1;
+  color: #3e4247;
 }
 
-.summary-summary-item {
+.complex-summary-summary-item {
   display: flex;
   margin-bottom: 0;
   margin-top: .5rem;
 }
 
-.summary-item-title {
+.complex-summary-item-title {
+  margin-top: 0rem;
+  margin-bottom: 0.25em;
+  width: 50%;
+  font-size: 1rem;
+  color: #a9afb6;
+  line-height: 1.56;
 }
 
-.summary-item-value {
+.complex-summary-item-value {
+  margin-top: 0rem;
+  margin-bottom: 0.25rem;
+  width: 50%;
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 1.56;
+  color: #3e4247;
+}
+.complex-description {
+  padding-top: 0.125rem;
+  padding-bottom: 0.125rem;
+}
+
+.complex-description-paragraph {
+  margin-top: 0.25rem;
+  margin-bottom: 25px;
+  font-size: 1rem;
+  color: #3e4247;
+  line-height: 25px;
+}
+
+.complex-infrastructure {
+  padding-bottom: 3.5rem;
+}
+.complex-infrastructure-wrapper {
+  padding-top: 2rem;
+  border-top: 1px solid #e0e0e1;
+}
+.complex-infrastructure-items {
+  margin-top: 0.25rem;
+}
+.complex-infrastructure-item {
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+  line-height: 1.38;
+  color: #3e4247;
+}
+
+.complex-offers {
+  background: #f4f5f9;
+}
+
+.complex-offer-card {
+  background: #fff;
 }
