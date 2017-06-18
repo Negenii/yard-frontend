@@ -181,13 +181,16 @@
 .complex-infrastructure {
   padding-bottom: 3.5rem;
 }
+
 .complex-infrastructure-wrapper {
   padding-top: 2rem;
   border-top: 1px solid #e0e0e1;
 }
+
 .complex-infrastructure-items {
   margin-top: 0.25rem;
 }
+
 .complex-infrastructure-item {
   margin-top: 0;
   margin-bottom: 0.5rem;
@@ -217,6 +220,7 @@
   padding: 1.5rem;
   background-color: #fff;
 }
+
 .complex-offer-card-heading {
   margin-top: 0;
   margin-bottom: 1.5rem;
@@ -225,6 +229,7 @@
   font-weight: 700;
   color: #3e4247;
 }
+
 .complex-title-subheading {
   margin-top: 0;
   margin-bottom: 10px;
@@ -233,6 +238,7 @@
   line-height: 1.38;
   color: #a9afb6;
 }
+
 .complex-title-value {
   padding: 0;
   margin-top: 0;
@@ -241,4 +247,14 @@
   font-size: 1rem;
   line-height: 1.38;
   color: #3e4247;
+}
+
+.complex-area {
+  padding-top: 4rem;
+  padding-bottom: 13.5rem;
+  background-color: #3e4247;
+}
+
+.complex-area-wrapper {
+  padding-top: 7.25rem;
 }
