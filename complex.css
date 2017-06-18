@@ -125,13 +125,21 @@
 
 .complex-summary {
   background: #fff;
-  margin-bottom: 2rem;
+  margin-bottom: 2.5rem;
 }
+
+.complex-summary-wrapper {
+  margin-top: .5rem;
+}
+.complex-description-title-wrapper {
+  margin-top: 0.35em;
+}
+
 .complex-summary-title,
 .complex-description-title,
 .complex-infrastructure-title {
-  margin-top: 0rem;
-  margin-bottom: 0.5rem;
+  margin-top: 0;
+  margin-bottom: 0rem;
   padding-bottom: 0;
   font-family: 'Philosopher';
   font-size: 1.5rem;
@@ -166,7 +174,7 @@
   color: #3e4247;
 }
 .complex-description {
-  padding-top: 0.5rem;
+  padding-top: 0rem;
   padding-bottom: 0.125rem;
 }
 
