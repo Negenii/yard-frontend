@@ -18,8 +18,6 @@ body {
 }
 
 img {
-  width: 484px;
-  height: 350px;
   flex-shrink: 0;
 }
 
@@ -137,7 +135,8 @@ h3 {
 }
 
 .complexes-complex-block-image {
-  height: 100%;
+  width: 484px;
+  height: 350px;
 }
 
 .complexes-complex-description-info {
