@@ -1,7 +1,7 @@
 .complex-heading {
   display: flex;
   background: #ffffff;
-  padding-bottom: 0.5rem;
+  padding-bottom: 0.7rem;
   padding-top: 1.5rem;
 }
 
@@ -10,9 +10,8 @@
   font-size: 2rem;
   font-weight: bold;
   color: #3e4247;
-  margin-bottom: 1rem;
+  margin-bottom: 0.7rem;
   margin-top: 0;
-  line-height: 1;
 }
 
 .complex-heading-address {
