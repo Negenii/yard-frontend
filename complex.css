@@ -1,48 +1,51 @@
-.complex-title{
+.complex-title {
   display: flex;
   flex-direction: column;
   background: #ffffff;
 }
-.complex-title-heading{
+
+.complex-title-heading {
   font-family: Philosopher;
   font-size: 2rem;
-	font-weight: bold;
+  font-weight: bold;
   color: #3e4247;
   margin-bottom: 0.5rem;
 }
-.complex-title-address{
+
+.complex-title-address {
   font-family: 'Fira Sans', sans-serif;
   font-size: 14px;
-	font-weight: 300;
-	line-height: 1.57;
+  font-weight: 300;
+  line-height: 1.57;
   margin-top: 0;
   color: #a9afb6;
 }
-.complex-add-to-favs{
+
+.complex-add-to-favs {
   border-radius: 2px;
-	border: solid 1px #e0e0e1;
+  border: solid 1px #e0e0e1;
   background: #fff;
   font-family: 'Fira Sans', sans-serif;
-	font-size: 10px;
-	font-weight: 300;
-	line-height: 1.0;
-	color: #00779a;
+  font-size: 10px;
+  font-weight: 300;
+  line-height: 1.0;
+  color: #00779a;
   padding: 8px 16px;
   margin-top: 1.5rem;
 }
 
-.gallery-images-wrapper{
+.gallery-images-wrapper {
   display: flex;
   flex-direction: row;
   overflow: scroll;
 }
 
-.gallery-button-wrapper{
+.gallery-button-wrapper {
   position: absolute;
   margin-top: -2.625rem;
 }
 
-.gallery-all-photos-btn{
+.gallery-all-photos-btn {
   border: none;
   border-radius: 2px;
   background-color: #00779a;
@@ -53,33 +56,34 @@
   padding: 8px 16px;
   opacity: 0.8;
 }
-.summary{
+
+.summary {
   background: #fff;
 }
 
-.summary-headings{
+.summary-headings {
   display: flex;
   flex-direction: row;
   border-bottom: 1px solid #e0e0e1;
 }
 
-.summary-heading{
+.summary-heading {
   font-family: Philosopher;
   font-size: 1.5rem;
-	font-weight: bold;
+  font-weight: bold;
   color: #3e4247;
   margin-bottom: 0.5rem;
-	line-height: 1.12;
+  line-height: 1.12;
   display: flex;
   flex-direction: column;
   padding-right: 3rem;
   padding-bottom: 1rem;
 }
 
-.summary-heading-subheading{
-    font-family: 'Fira Sans', sans-serif;
-  	font-size: 14px;
-  	font-weight: 300;
-  	line-height: 1.57;
-  	color: #a9afb6;
+.summary-heading-subheading {
+  font-family: 'Fira Sans', sans-serif;
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 1.57;
+  color: #a9afb6;
 }
