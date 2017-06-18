@@ -1,11 +1,11 @@
-.complex-title {
+.complex-heading {
   display: flex;
   background: #ffffff;
   padding-bottom: 0.5rem;
   padding-top: 1.5rem;
 }
 
-.complex-title-heading {
+.complex-heading-title {
   font-family: Philosopher;
   font-size: 2rem;
   font-weight: bold;
@@ -15,7 +15,7 @@
   line-height: 1;
 }
 
-.complex-title-address {
+.complex-heading-address {
   display: block;
   margin-top: 0;
   margin-bottom: 0.5rem;
@@ -74,7 +74,7 @@
   background: #fff;
 }
 
-.complex-info-headings {
+.complex-info-titles {
   display: flex;
   margin-right: 3rem;
   margin-bottom: 2.25rem;
@@ -82,13 +82,13 @@
   border-bottom: 1px solid #e0e0e1;
 }
 
-.complex-info-headings-item {
+.complex-info-titles-item {
   margin-right: 3rem;
   margin-bottom: 1rem;
   padding-bottom: 0.25rem;
 }
 
-.complexes-info-heading {
+.complexes-info-title {
   font-size: 1.5rem;
   margin-bottom: 0.5rem;
   display: flex;
@@ -102,7 +102,7 @@
   color: #3e4247;
 }
 
-.complex-info-heading-subheading {
+.complex-info-title-subtitle {
   display: block;
   font-family: 'Fira Sans', sans-serif;
   font-size: 14px;
@@ -113,7 +113,7 @@
   margin-bottom: 0.5rem;
 }
 
-.complex-info-heading {
+.complex-info-title {
   font-family: 'Philosopher';
   font-size: 1.5rem;
   font-weight: 700;
@@ -128,9 +128,9 @@
   background: #fff;
   margin-bottom: 2rem;
 }
-.complex-summary-heading,
-.complex-description-heading,
-.complex-infrastructure-heading {
+.complex-summary-title,
+.complex-description-title,
+.complex-infrastructure-title {
   margin-top: 0.5rem;
   margin-bottom: 0.5rem;
   padding-bottom: 0;
@@ -204,7 +204,7 @@
   background-color: #f4f5f9;
 }
 
-.complex-offers-heading {
+.complex-offers-title {
   margin-top: 0.5rem;
   margin-bottom: 0.5rem;
   padding-bottom: 0;
@@ -221,7 +221,7 @@
   background-color: #fff;
 }
 
-.complex-offer-card-heading {
+.complex-offer-card-title {
   margin-top: 0;
   margin-bottom: 1.5rem;
   font-family: 'Philosopher';
@@ -230,7 +230,7 @@
   color: #3e4247;
 }
 
-.complex-title-subheading {
+.complex-title-subtitle {
   margin-top: 0;
   margin-bottom: 10px;
   font-family: 'Fira Sans';
@@ -257,4 +257,23 @@
 
 .complex-area-wrapper {
   padding-top: 7.25rem;
+}
+.complex-area-title {
+  margin-top: 0;
+  margin-bottom: 3rem;
+  padding-bottom: 0;
+  font-family: 'Philosopher';
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #a9afb6;
+}
+
+.complex-area-paragraph {
+  padding-right: 4rem;
+  margin-bottom: 3.25rem;
+  font-family: 'Philosopher';
+  font-size: 3rem;
+  font-weight: 700;
+  line-height: 1.25;
+  color: #ffffff;
 }
