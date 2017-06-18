@@ -100,7 +100,9 @@
   line-height: 1;
   color: #3e4247;
 }
-
+.complex-info-title-architect {
+  width: 286px;
+}
 .complex-info-title-subtitle {
   display: block;
   padding-top: 1rem;
