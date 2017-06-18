@@ -196,9 +196,49 @@
 }
 
 .complex-offers {
-  background: #f4f5f9;
+  padding-top: 3.75rem;
+  padding-bottom: 4rem;
+  background-color: #f4f5f9;
+}
+
+.complex-offers-heading {
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+  padding-bottom: 0;
+  font-family: 'Philosopher';
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 1;
+  color: #3e4247;
 }
 
 .complex-offer-card {
-  background: #fff;
+  margin-top: 1rem;
+  padding: 1.5rem;
+  background-color: #fff;
+}
+.complex-offer-card-heading {
+  margin-top: 0;
+  margin-bottom: 1.5rem;
+  font-family: 'Philosopher';
+  font-size: 20px;
+  font-weight: 700;
+  color: #3e4247;
+}
+.complex-title-subheading {
+  margin-top: 0;
+  margin-bottom: 10px;
+  font-family: 'Fira Sans';
+  font-size: 1rem;
+  line-height: 1.38;
+  color: #a9afb6;
+}
+.complex-title-value {
+  padding: 0;
+  margin-top: 0;
+  margin-bottom: 25px;
+  font-family: 'Fira Sans';
+  font-size: 1rem;
+  line-height: 1.38;
+  color: #3e4247;
 }
