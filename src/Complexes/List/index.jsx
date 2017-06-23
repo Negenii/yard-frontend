@@ -5,7 +5,7 @@ import ComplexCard from './ComplexCard';
 import Banner from '../../Banner';
 import BannerText from '../../Banner/BannerText';
 
-export default () =>
+export default () => (
   <BodyClassName className="background-pattern">
     <div>
       <Banner />
@@ -18,4 +18,5 @@ export default () =>
         </Grid>
       </section>
     </div>
-  </BodyClassName>;
+  </BodyClassName>
+);

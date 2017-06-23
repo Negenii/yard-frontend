@@ -1,26 +1,56 @@
 import React from 'react';
 import { BrowserRouter as Router, Link, Route } from 'react-router-dom';
+import styled from 'styled-components';
 import { Grid } from 'react-flexbox-grid';
-import Logo from './compass-logo.svg';
+import LogoImg from './compass-logo.svg';
 
+const Nav = styled.nav`
+  font-family: 'Fira Sans', sans-serif;
+  display: flex;
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+`;
 
-export default () => {
-  return (
-    <Router>
-      <header className="header">
-        <Grid>
-          <div className="header-wrapper">
-            <Link to="/" >
-              <img src={Logo} alt="compass-logo" className="header-logo" />
-            </Link>
-            <nav className="header-nav">
-              <a href="undefined" className="header-nav-link">Купить</a>
-              <a href="undefined" className="header-nav-link">Снять</a>
-              <a href="undefined" className="header-nav-link">Наши агенты</a>
-            </nav>
-          </div>
-        </Grid>
-      </header>
-    </Router>
-  );
-};
+const Header = styled.header`
+display: flex;
+width: 100%;
+background-color: #fff;
+border-bottom: solid 1px #eaebf0;
+`;
+
+const HeaderWrapper = styled.div`
+display: flex;
+justify-content: space-between;
+`;
+
+const Logo = styled.img`
+margin-top: 1.25rem;
+margin-bottom: 1.25rem;
+`;
+
+const NavLink = styled.a`
+margin-left: 2rem;
+font-size: 1rem;
+text-decoration: none;
+line-height: 1;
+color: #3e4247;
+`;
+
+export default () => (
+  <Router>
+    <Header>
+      <Grid>
+        <HeaderWrapper>
+          <Link to="/" >
+            <Logo src={LogoImg} alt="compass-logo" />
+          </Link>
+          <Nav className="header-nav">
+            <NavLink href="undefined">Купить</NavLink>
+            <NavLink href="undefined">Снять</NavLink>
+            <NavLink href="undefined">Наши агенты</NavLink>
+          </Nav>
+        </HeaderWrapper>
+      </Grid>
+    </Header>
+  </Router>
+);
