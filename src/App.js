@@ -1,15 +1,13 @@
 import React from 'react';
 import { Grid, Row, Col } from 'react-flexbox-grid';
+import { BrowserRouter as Router, Route } from 'react-router-dom';
 import Header from './Header';
 import Banner from './Banner';
 import BannerText from './Banner/BannerText';
 import Footer from './Footer';
-import ComplexCard from './Complexes/List/ComplexCard';
-import {
-  BrowserRouter as Router,
-  Route,
-  Link
-} from 'react-router-dom';
+import Complexes from './Complexes/List';
+import Complex from './Complexes/Show';
+
 
 import './style.css';
 import './complex.css';
@@ -19,15 +17,14 @@ import './complex.css';
 export default () => (
   <bodyClassName className="background-pattern">
     <Header />
-    <Banner />
-    <BannerText />
-    <section className="complexes-cards">
-      <Grid>
-        <ComplexCard />
-        <ComplexCard />
-        <ComplexCard />
-      </Grid>
-    </section>
+    <Router>
+      <div className="wrapper">
+        <Route exact path="/" component={Complexes} />
+        <Route path="/complex/:id" component={Complex} />
+      </div>
+  </Router>
+
+
     <Footer />
   </bodyClassName>
   );
