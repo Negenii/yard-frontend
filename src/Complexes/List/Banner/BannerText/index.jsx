@@ -27,20 +27,19 @@ const Button = styled.button`
   font-family: 'Fira Sans', sans-serif;
 `;
 
-export default () => (
-  <BannerText>
+export default () =>
+  (<BannerText>
     <Grid>
       <Row center="xs">
         <Col xs={8}>
           <Title>Discover Our New Developments</Title>
           <Paragraph>
-              Compass brings a modern approach to new development marketing and
-              sales. From boutique rental conversions to luxurious ground-up
-              condominiums, browse our portfolio of current offerings.
-            </Paragraph>
+            Compass brings a modern approach to new development marketing and
+            sales. From boutique rental conversions to luxurious ground-up
+            condominiums, browse our portfolio of current offerings.
+          </Paragraph>
           <Button type="button" name="contact">Contact The Team</Button>
         </Col>
       </Row>
     </Grid>
-  </BannerText>
-  );
+  </BannerText>);
