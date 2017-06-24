@@ -3,6 +3,19 @@ import { Grid, Row, Col } from 'react-flexbox-grid';
 import styled from 'styled-components';
 import ArrowImg from './right-arrow.svg';
 
+const Footer = styled.footer`
+  width: 100%;
+  height: auto;
+  padding-top: 2rem;
+  margin-top: 2rem;
+  padding-bottom: 1.75rem;
+  background-color: #111111;
+  font-family: 'Fira Sans', sans-serif;
+  font-weight: 300;
+  font-size: 14px;
+  color: #a9afb6;
+`;
+
 const Heading = styled.h4`
   margin-top: 1rem;
   font-size: 0.875rem;
@@ -69,7 +82,7 @@ const Disclaimer = styled.p`
 `;
 
 export default () => (
-  <footer className="footer">
+  <Footer>
     <Grid>
       <Row>
         <Col xs={2}>
@@ -105,5 +118,5 @@ export default () => (
         </Col>
       </Row>
     </Grid>
-  </footer>
+  </Footer>
 );
