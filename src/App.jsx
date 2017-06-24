@@ -2,6 +2,7 @@
 import React from 'react';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 import styled from 'styled-components';
+import { Helmet } from 'react-helmet';
 import Header from './Header';
 import Footer from './Footer';
 import List from './Complexes/List';
@@ -20,6 +21,9 @@ export default () => (
     <Header />
     <Router>
       <main>
+        <Helmet>
+            <title>Compass Development</title>
+        </Helmet>
         <Route exact path="/" component={List} />
         <Route path="/complex/" component={Show} />
       </main>

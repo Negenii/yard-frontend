@@ -3,7 +3,7 @@ import { Grid, Row, Col } from 'react-flexbox-grid';
 import styled from 'styled-components';
 import Card from './Card';
 
-//TODO: Props as an object
+// TODO: Props as an object
 
 const Offers = styled.section`
   padding-top: 3.75rem;
