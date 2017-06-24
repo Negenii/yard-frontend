@@ -1,5 +1,4 @@
 import React from 'react';
-import { BrowserRouter as Router, Link } from 'react-router-dom';
 import styled from 'styled-components';
 import { Grid } from 'react-flexbox-grid';
 import LogoImg from './compass-logo.svg';
@@ -37,20 +36,16 @@ const NavLink = styled.a`
 `;
 
 export default () => (
-  <Router>
-    <Header>
-      <Grid>
-        <HeaderWrapper>
-          <Link to="/" >
-            <Logo src={LogoImg} alt="compass-logo" />
-          </Link>
-          <Nav className="header-nav">
-            <NavLink href="undefined">Купить</NavLink>
-            <NavLink href="undefined">Снять</NavLink>
-            <NavLink href="undefined">Наши агенты</NavLink>
-          </Nav>
-        </HeaderWrapper>
-      </Grid>
-    </Header>
-  </Router>
+  <Header>
+    <Grid>
+      <HeaderWrapper>
+        <Logo src={LogoImg} alt="compass-logo" />
+        <Nav className="header-nav">
+          <NavLink href="undefined">Купить</NavLink>
+          <NavLink href="undefined">Снять</NavLink>
+          <NavLink href="undefined">Наши агенты</NavLink>
+        </Nav>
+      </HeaderWrapper>
+    </Grid>
+  </Header>
 );
