@@ -12,8 +12,8 @@ import Map from './Map';
 const title = 'Жилой комплекс «Полянка/44»';
 const address = 'Район Якиманка, улица Большая Полянка, дом 44 · 119180';
 
-export default () => (
-  <div>
+export default () =>
+  (<div>
     <Heading title={title} address={address} />
     <Gallery imagesCount={41} />
     <Info />
@@ -23,5 +23,4 @@ export default () => (
     <Offers />
     <Area />
     <Map />
-  </div>
-);
+  </div>);

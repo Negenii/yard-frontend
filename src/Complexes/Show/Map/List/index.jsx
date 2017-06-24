@@ -37,8 +37,8 @@ const Text = styled.p`
   color: #a9afb6;
 `;
 
-export default () => (
-  <List>
+export default () =>
+  (<List>
     <Item>
       <Title>Красный Октябрь</Title>
       <Text>24 минуты, 6 км</Text>
@@ -51,5 +51,4 @@ export default () => (
       <Title>Третьяковская галерея</Title>
       <Text>14 минуты, 4 км</Text>
     </Item>
-  </List>
-);
+  </List>);

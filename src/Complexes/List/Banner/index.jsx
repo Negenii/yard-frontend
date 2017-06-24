@@ -11,8 +11,7 @@ const Banner = styled.section`
   background: #161616;
 `;
 
-export default () => (
-  <Banner>
+export default () =>
+  (<Banner>
     <img src={CompassDevelopmentLogo} alt="" />
-  </Banner>
-);
+  </Banner>);

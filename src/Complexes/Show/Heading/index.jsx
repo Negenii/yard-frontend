@@ -46,8 +46,8 @@ const FavsButton = styled.button`
   color: #00779a;
 `;
 
-export default (props) => (
-  <Heading>
+export default props =>
+  (<Heading>
     <Grid>
       <Row between="xs">
         <Col xs>
@@ -55,9 +55,10 @@ export default (props) => (
           <Address>{props.address}</Address>
         </Col>
         <Favs>
-          <FavsButton type="button" name="add-to-favs-button">В избранное</FavsButton>
+          <FavsButton type="button" name="add-to-favs-button">
+            В избранное
+          </FavsButton>
         </Favs>
       </Row>
     </Grid>
-  </Heading>
-);
+  </Heading>);

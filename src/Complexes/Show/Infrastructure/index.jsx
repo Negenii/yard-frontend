@@ -33,8 +33,8 @@ const Unit = styled.p`
   color: #3e4247;
 `;
 
-export default () => (
-  <Infrastructure>
+export default () =>
+  (<Infrastructure>
     <Grid>
       <Wrapper>
         <Title>Инфраструктура</Title>
@@ -80,5 +80,4 @@ export default () => (
         </Units>
       </Wrapper>
     </Grid>
-  </Infrastructure>
-);
+  </Infrastructure>);

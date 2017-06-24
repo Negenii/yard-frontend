@@ -32,8 +32,8 @@ const AllPhotosButton = styled.button`
   cursor: pointer;
 `;
 
-export default (props) => (
-  <div>
+export default props =>
+  (<div>
     <Gallery>
       <ImagesWrapper>
         <Image src="/images/bitmap-1.png" alt="" />
@@ -50,5 +50,4 @@ export default (props) => (
         </ButtonWrapper>
       </Grid>
     </Gallery>
-  </div>
-);
+  </div>);

@@ -7,7 +7,6 @@ import ComplexCard from './ComplexCard';
 import Banner from './Banner';
 import BannerText from './Banner/BannerText';
 
-
 const Body = styled(BodyClassName)`
   background-color: #eaebf0;
   background-image: url('images/background.png');
@@ -18,8 +17,8 @@ const Cards = styled.section`
   padding-bottom: 1rem;
 `;
 
-export default () => (
-  <Body>
+export default () =>
+  (<Body>
     <div>
       <Banner />
       <BannerText />
@@ -31,5 +30,4 @@ export default () => (
         </Grid>
       </Cards>
     </div>
-  </Body>
-);
+  </Body>);

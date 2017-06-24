@@ -22,23 +22,25 @@ const Title = styled.h2`
   color: #3e4247;
 `;
 
-export default () => (
-  <Offers>
+export default () =>
+  (<Offers>
     <Grid>
       <Row sx="center">
         <Title>Предложения в ЖК «Полянка/44»</Title>
       </Row>
       <Row>
         <Col xs={4}>
-          <Card /> {/* data={props.data} kv={1} smin={59} smax={120} pmin={20.3}  pmax={84.2} */}
+          <Card />{' '}
+          {/* data={props.data} kv={1} smin={59} smax={120} pmin={20.3}  pmax={84.2} */}
         </Col>
         <Col xs={4}>
-          <Card /> {/* data={props.data} kv={2} smin={59} smax={120} pmin={20.3}  pmax={84.2} */}
+          <Card />{' '}
+          {/* data={props.data} kv={2} smin={59} smax={120} pmin={20.3}  pmax={84.2} */}
         </Col>
         <Col xs={4}>
-          <Card /> {/* data={props.data} kv={3} smin={59} smax={120} pmin={20.3}  pmax={84.2} */}
+          <Card />{' '}
+          {/* data={props.data} kv={3} smin={59} smax={120} pmin={20.3}  pmax={84.2} */}
         </Col>
       </Row>
     </Grid>
-  </Offers>
-);
+  </Offers>);

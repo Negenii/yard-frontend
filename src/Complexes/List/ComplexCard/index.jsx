@@ -52,22 +52,22 @@ const Info = styled.p`
   margin-right: 2rem;
 `;
 
-
-export default (props) => {
-  return (
-    <Row>
-      <Col xs={12}>
-        <CardLink to={`/complex/${props.id}`}>
-          <Image src={props.imageUrl} alt="complex" />
-          <Description>
-            <Address>SOUTH BEACH, SAN FRANCISCO</Address>
-            <Title>The Harrison</Title>
-            <Info>
-              Beautifully appointed residences perched atop Rincon Hill, The Harrison offers unparalleled Bay Bridge and city views within steps of San Francisco’s greatest restaurants, shops, and The Embarcadero.
+export default props => (
+  <Row>
+    <Col xs={12}>
+      <CardLink to={`/complex/${props.id}`}>
+        <Image src={props.imageUrl} alt="complex" />
+        <Description>
+          <Address>SOUTH BEACH, SAN FRANCISCO</Address>
+          <Title>The Harrison</Title>
+          <Info>
+              Beautifully appointed residences perched atop Rincon Hill, The
+              Harrison offers unparalleled Bay Bridge and city views within
+              steps of San Francisco’s greatest restaurants, shops, and The
+              Embarcadero.
             </Info>
-          </Description>
-        </CardLink>
-      </Col>
-    </Row>
+        </Description>
+      </CardLink>
+    </Col>
+  </Row>
   );
-};

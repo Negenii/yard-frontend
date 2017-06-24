@@ -59,8 +59,8 @@ const Button = styled.button`
   cursor: pointer;
 `;
 
-export default () => (
-  <Card>
+export default () =>
+  (<Card>
     <Title>1-комнатные квартиры</Title>
     <Subtitle>Площадь</Subtitle>
     <Value>от 59 до 120 м<sup>2</sup></Value>
@@ -71,5 +71,4 @@ export default () => (
     <ButtonWrapper>
       <Button>Посмотреть предложения</Button>
     </ButtonWrapper>
-  </Card>
-);
+  </Card>);

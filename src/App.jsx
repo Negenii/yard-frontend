@@ -7,7 +7,6 @@ import Footer from './Footer';
 import List from './Complexes/List';
 import Show from './Complexes/Show';
 
-
 const Body = styled.div`
   font-family: 'Fira Sans', sans-serif;
   font-weight: 400;
@@ -15,8 +14,8 @@ const Body = styled.div`
   font-smoothing: antialiased;
 `;
 
-export default () => (
-  <Body>
+export default () =>
+  (<Body>
     <Header />
     <Router>
       <main>
@@ -28,5 +27,4 @@ export default () => (
       </main>
     </Router>
     <Footer />
-  </Body>
-  );
+  </Body>);

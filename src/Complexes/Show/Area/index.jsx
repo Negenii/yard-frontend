@@ -2,7 +2,6 @@ import React from 'react';
 import { Grid, Row, Col } from 'react-flexbox-grid';
 import styled from 'styled-components';
 
-
 const Area = styled.section`
   padding-top: 4rem;
   padding-bottom: 13.5rem;
@@ -45,9 +44,8 @@ const Image = styled.img`
   width: 100%;
 `;
 
-
-export default () => (
-  <Area>
+export default () =>
+  (<Area>
     <Grid>
       <Row xs="between">
         <Col xs={6}>
@@ -60,9 +58,11 @@ export default () => (
           </Wrapper>
         </Col>
         <Col xs={6}>
-          <Image src={process.env.PUBLIC_URL + '/images/yakimanka.png'} alt="Якиманка" />
+          <Image
+            src={`${process.env.PUBLIC_URL}/images/yakimanka.png`}
+            alt="Якиманка"
+          />
         </Col>
       </Row>
     </Grid>
-  </Area>
-);
+  </Area>);

@@ -47,9 +47,8 @@ const Value = styled.dd`
   color: #3e4247;
 `;
 
-
-export default () => (
-  <Summary>
+export default () =>
+  (<Summary>
     <Grid>
       <Title>Характеристики</Title>
       <SummaryWrapper>
@@ -99,5 +98,4 @@ export default () => (
         </Row>
       </SummaryWrapper>
     </Grid>
-  </Summary>
-);
+  </Summary>);

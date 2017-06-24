@@ -35,8 +35,8 @@ const NavLink = styled.a`
   color: #3e4247;
 `;
 
-export default () => (
-  <Header>
+export default () =>
+  (<Header>
     <Grid>
       <HeaderWrapper>
         <Logo src={LogoImg} alt="compass-logo" />
@@ -47,5 +47,4 @@ export default () => (
         </Nav>
       </HeaderWrapper>
     </Grid>
-  </Header>
-);
+  </Header>);

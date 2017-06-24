@@ -48,8 +48,8 @@ const Subtitle = styled.small`
   line-height: 1;
 `;
 
-export default () => (
-  <Info>
+export default () =>
+  (<Info>
     <Grid>
       <Titles>
         <TitlesItem>
@@ -74,5 +74,4 @@ export default () => (
         </TitlesItem>
       </Titles>
     </Grid>
-  </Info>
-);
+  </Info>);
