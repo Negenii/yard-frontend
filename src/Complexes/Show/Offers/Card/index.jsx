@@ -59,14 +59,14 @@ const Button = styled.button`
   cursor: pointer;
 `;
 
-export default () =>
+export default props =>
   (<Card>
-    <Title>1-комнатные квартиры</Title>
+    <Title>{props.rooms}-комнатные квартиры</Title>
     <Subtitle>Площадь</Subtitle>
-    <Value>от 59 до 120 м<sup>2</sup></Value>
+    <Value>от {props.smin} до {props.smax} м<sup>2</sup></Value>
 
     <Subtitle>Стоимость</Subtitle>
-    <Value>от 20.3 до 84.2 млн руб</Value>
+    <Value>от {props.pmin} до {props.pmax} млн руб</Value>
 
     <ButtonWrapper>
       <Button>Посмотреть предложения</Button>
