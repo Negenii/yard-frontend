@@ -1,12 +1,11 @@
 import React from 'react';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
-import BodyClassName from 'react-body-classname';
 import styled from 'styled-components';
 
 import Header from './Header';
 import Footer from './Footer';
-import Complexes from './Complexes/List';
-import Complex from './Complexes/Show';
+import List from './Complexes/List';
+import Show from './Complexes/Show';
 
 // import './style.css';
 // import './complex.css';
@@ -25,8 +24,8 @@ export default () => (
       <Header />
       <Router>
         <div className="wrapper">
-          <Route exact path="/" component={Complexes} />
-          <Route path="/complex/:id" component={Complex} />
+          <Route exact path="/" component={List} />
+          <Route path="/complex/:id" component={Show} />
         </div>
       </Router>
       <Footer />

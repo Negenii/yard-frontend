@@ -1,9 +1,5 @@
 import React from 'react';
-import {
-  BrowserRouter as Router,
-  Route,
-  Link
-} from 'react-router-dom';
+import { BrowserRouter as Router, Link } from 'react-router-dom';
 import { Row, Col } from 'react-flexbox-grid';
 import styled from 'styled-components';
 
@@ -61,7 +57,7 @@ export default (props) => {
     <Router>
       <Row>
         <Col xs={12}>
-          <CardLink to={`/Complex/${props.id}`}>
+          <CardLink to={`/complex/${props.id}`}>
             <Image src={props.imageUrl} alt="complex" />
             <Description>
               <Address>SOUTH BEACH, SAN FRANCISCO</Address>
