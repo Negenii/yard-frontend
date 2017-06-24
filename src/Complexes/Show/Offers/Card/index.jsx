@@ -63,10 +63,10 @@ export default props =>
   (<Card>
     <Title>{props.rooms}-комнатные квартиры</Title>
     <Subtitle>Площадь</Subtitle>
-    <Value>от {props.smin} до {props.smax} м<sup>2</sup></Value>
+    <Value>от {props.squareMin} до {props.squareMax} м<sup>2</sup></Value>
 
     <Subtitle>Стоимость</Subtitle>
-    <Value>от {props.pmin} до {props.pmax} млн руб</Value>
+    <Value>от {props.priceMin} до {props.priceMax} млн руб</Value>
 
     <ButtonWrapper>
       <Button>Посмотреть предложения</Button>

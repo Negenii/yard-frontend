@@ -30,13 +30,31 @@ export default () =>
       </Row>
       <Row>
         <Col xs={4}>
-          <Card rooms={1} smin={59} smax={120} pmin={20.3} pmax={84.2} />
+          <Card
+            rooms="1"
+            squareMin="59"
+            squareMax="120"
+            priceMin="20.3"
+            priceMax="84.2"
+          />
         </Col>
         <Col xs={4}>
-          <Card rooms={2} smin={59} smax={120} pmin={20.3} pmax={84.2} />
+          <Card
+            rooms="2"
+            square-min="59"
+            square-max="120"
+            price-min="20.3"
+            price-max="84.2"
+          />
         </Col>
         <Col xs={4}>
-          <Card rooms={3} smin={59} smax={120} pmin={20.3} pmax={84.2} />
+          <Card
+            rooms="3"
+            square-min="59"
+            square-max="120"
+            price-min="20.3"
+            price-max="84.2"
+          />
         </Col>
       </Row>
     </Grid>
