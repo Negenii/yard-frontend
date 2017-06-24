@@ -11,7 +11,7 @@ import Complex from './Complexes/Show';
 // import './style.css';
 // import './complex.css';
 /* eslint-disable react/jsx-filename-extension */
-/* eslint max-len: ["error", 800]*/
+
 
 const Body = styled.div`
 font-family: 'Fira Sans', sans-serif;
