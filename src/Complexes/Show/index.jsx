@@ -5,6 +5,8 @@ import Gallery from './Gallery';
 import Info from './Info';
 import Summary from './Summary';
 import Description from './Description';
+import Infrastructure from './Infrastructure';
+import Offers from './Offers';
 
 const title = 'Жилой комплекс «Полянка/44»';
 const address = 'Район Якиманка, улица Большая Полянка, дом 44 · 119180';
@@ -16,86 +18,8 @@ export default () => (
     <Info />
     <Summary />
     <Description />
-    <section className="complex-infrastructure">
-      <Grid>
-        <div className="complex-infrastructure-wrapper">
-          <h2 className="complex-infrastructure-title">Инфраструктура</h2>
-          <div className="complex-infrastructure-items">
-            <Row>
-              <div className="col-xs-2">
-                <p className="complex-infrastructure-item">Бассейн</p>
-                <p className="complex-infrastructure-item">Частная школа</p>
-              </div>
-              <div className="col-xs-2">
-                <p className="complex-infrastructure-item">Бассейн</p>
-                <p className="complex-infrastructure-item">Частная школа</p>
-              </div>
-              <div className="col-xs-2">
-                <p className="complex-infrastructure-item">Бассейн</p>
-                <p className="complex-infrastructure-item">Частная школа</p>
-              </div>
-              <div className="col-xs-2">
-                <p className="complex-infrastructure-item">Бассейн</p>
-                <p className="complex-infrastructure-item">Частная школа</p>
-              </div>
-              <div className="col-xs-2">
-                <p className="complex-infrastructure-item">Бассейн</p>
-                <p className="complex-infrastructure-item">Частная школа</p>
-              </div>
-              <div className="col-xs-2">
-                <p className="complex-infrastructure-item">Бассейн</p>
-                <p className="complex-infrastructure-item">Частная школа</p>
-              </div>
-            </Row>
-          </div>
-        </div>
-      </Grid>
-    </section>
-    <section className="complex-offers">
-      <Grid>
-        <div className="row center-xs">
-          <h2 className="complex-offers-title">Предложения в ЖК «Полянка/44»</h2>
-        </div>
-        <Row>
-          <Col xs={4}>
-            <div className="complex-offer-card">
-              <h3 className="complex-offer-card-title">1-комнатные квартиры</h3>
-              <p className="complex-offer-card-subtitle">Площадь</p>
-              <p className="complex-offer-card-value">от 59 до 120 м²</p>
-              <p className="complex-offer-card-subtitle">Стоимость</p>
-              <p className="complex-offer-card-value">от 20.3 до 84.2 млн руб</p>
-              <p className="complex-offer-card-button-wrapper">
-                <button className="complex-offer-card-button">Посмотреть предложения</button>
-              </p>
-            </div>
-          </Col>
-          <Col xs={4}>
-            <div className="complex-offer-card">
-              <h3 className="complex-offer-card-title">2-комнатные квартиры</h3>
-              <p className="complex-offer-card-subtitle">Площадь</p>
-              <p className="complex-offer-card-value">от 59 до 120 м²</p>
-              <p className="complex-offer-card-subtitle">Стоимость</p>
-              <p className="complex-offer-card-value">от 20.3 до 84.2 млн руб</p>
-              <p className="complex-offer-card-button-wrapper">
-                <button className="complex-offer-card-button">Посмотреть предложения</button>
-              </p>
-            </div>
-          </Col>
-          <Col xs={4}>
-            <div className="complex-offer-card">
-              <h3 className="complex-offer-card-title">3-комнатные квартиры</h3>
-              <p className="complex-offer-card-subtitle">Площадь</p>
-              <p className="complex-offer-card-value">от 59 до 120 м²</p>
-              <p className="complex-offer-card-subtitle">Стоимость</p>
-              <p className="complex-offer-card-value">от 20.3 до 84.2 млн руб</p>
-              <p className="complex-offer-card-button-wrapper">
-                <button className="complex-offer-card-button">Посмотреть предложения</button>
-              </p>
-            </div>
-          </Col>
-        </Row>
-      </Grid>
-    </section>
+    <Infrastructure />
+    <Offers />
     <section className="complex-area">
       <Grid>
         <div className="between-xs row">
