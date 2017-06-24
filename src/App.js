@@ -1,5 +1,5 @@
 /* eslint-disable react/jsx-filename-extension */
-import React from 'react';
+import React, { Component } from 'react';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 import styled from 'styled-components';
 
@@ -18,17 +18,23 @@ text-rendering: optimizeLegibility !important;
 font-smoothing: antialiased;
 `;
 
-export default () => (
-  <Body>
-    <div>
-      <Header />
-      <Router>
-        <div className="wrapper">
-          <Route exact path="/" component={List} />
-          <Route path="/complex/" component={Show} />
+class App extends Component {
+  render() {
+    return (
+      <Body>
+        <div>
+          <Header />
+          <Router>
+            <div className="wrapper">
+              <Route exact path="/" component={List} />
+              <Route path="/complex/" component={Show} />
+            </div>
+          </Router>
+          <Footer />
         </div>
-      </Router>
-      <Footer />
-    </div>
-  </Body>
-  );
+      </Body>
+    );
+  }
+}
+
+export default App;
