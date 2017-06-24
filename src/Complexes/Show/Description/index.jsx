@@ -22,7 +22,7 @@ const Title = styled.h2`
   color: #3e4247;
 `;
 
-const Parapraph= styled.p`
+const Parapraph = styled.p`
   margin-top: 0.25rem;
   margin-bottom: 25px;
   font-size: 1rem;

@@ -10,7 +10,7 @@ const Area = styled.section`
 `;
 
 const Wrapper = styled.div`
-padding-top: 7.25rem;
+  padding-top: 7.25rem;
 `;
 
 const Paragraph = styled.p`
@@ -35,10 +35,10 @@ const Title = styled.h2`
 `;
 
 const Link = styled.a`
-text-decoration: none;
-font-family: 'Fira Sans';
-font-size: 1rem;
-color: #00779a;
+  text-decoration: none;
+  font-family: 'Fira Sans';
+  font-size: 1rem;
+  color: #00779a;
 `;
 
 const Image = styled.img`
@@ -60,7 +60,7 @@ export default () => (
           </Wrapper>
         </Col>
         <Col xs={6}>
-          <Image src="/images/yakimanka.png" alt="Якиманка" />
+          <Image src={process.env.PUBLIC_URL + '/images/yakimanka.png'} alt="Якиманка" />
         </Col>
       </Row>
     </Grid>

@@ -1,5 +1,4 @@
 import React from 'react';
-import { Grid, Row, Col } from 'react-flexbox-grid';
 import styled from 'styled-components';
 
 const List = styled.div`
@@ -12,12 +11,13 @@ const Item = styled.div`
   padding-bottom: 1.5rem;
   background-color: #fff;
   border-bottom: solid 1px #e0e0e1;
-`;
-const LastItem = styled.div`
-  padding-top: 1.5rem;
-  padding-left: 1.5rem;
-  padding-bottom: 27px;
-  background-color: #fff;
+
+  &:last-child{
+    padding-top: 1.5rem;
+    padding-left: 1.5rem;
+    padding-bottom: 27px;
+    background-color: #fff;
+  }
 `;
 
 const Title = styled.p`
@@ -29,7 +29,7 @@ const Title = styled.p`
   color: #3e4247;
 `;
 
-const Text= styled.p`
+const Text = styled.p`
   margin-top: 0;
   margin-bottom: 0;
   font-size: 1rem;
@@ -47,9 +47,9 @@ export default () => (
       <Title>World className</Title>
       <Text>2 минуты, 300 м</Text>
     </Item>
-    <LastItem>
+    <Item>
       <Title>Третьяковская галерея</Title>
       <Text>14 минуты, 4 км</Text>
-    </LastItem>
+    </Item>
   </List>
 );

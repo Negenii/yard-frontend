@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Link, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Link } from 'react-router-dom';
 import styled from 'styled-components';
 import { Grid } from 'react-flexbox-grid';
 import LogoImg from './compass-logo.svg';
@@ -12,28 +12,28 @@ const Nav = styled.nav`
 `;
 
 const Header = styled.header`
-display: flex;
-width: 100%;
-background-color: #fff;
-border-bottom: solid 1px #eaebf0;
+  display: flex;
+  width: 100%;
+  background-color: #fff;
+  border-bottom: solid 1px #eaebf0;
 `;
 
 const HeaderWrapper = styled.div`
-display: flex;
-justify-content: space-between;
+  display: flex;
+  justify-content: space-between;
 `;
 
 const Logo = styled.img`
-margin-top: 1.25rem;
-margin-bottom: 1.25rem;
+  margin-top: 1.25rem;
+  margin-bottom: 1.25rem;
 `;
 
 const NavLink = styled.a`
-margin-left: 2rem;
-font-size: 1rem;
-text-decoration: none;
-line-height: 1;
-color: #3e4247;
+  margin-left: 2rem;
+  font-size: 1rem;
+  text-decoration: none;
+  line-height: 1;
+  color: #3e4247;
 `;
 
 export default () => (

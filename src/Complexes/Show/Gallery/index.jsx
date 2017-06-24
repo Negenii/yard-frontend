@@ -50,5 +50,5 @@ export default (props) => (
         </ButtonWrapper>
       </Grid>
     </Gallery>
-</div>
+  </div>
 );

@@ -23,6 +23,7 @@ const Heading = styled.h4`
   font-weight: 700;
   line-height: 1.5rem;
 `;
+
 const Paragraph = styled.p`
   margin-top: 0.5rem;
   margin-bottom: 0;
@@ -31,9 +32,11 @@ const Paragraph = styled.p`
   font-weight: 300;
   color: #a9afb6;
 `;
+
 const Phone = styled.p`
   margin-top: 1.3rem;
 `;
+
 const Title = styled.p`
   margin: 0;
   font-size: 0.875rem;
@@ -101,7 +104,6 @@ export default () => (
             <FooterLink href="undefined">Все ЖК Москвы</FooterLink>
             <LinkArrow src={ArrowImg} />
           </ArrowWrapper>
-
         </Col>
         <Col xs={2}>
           <FooterLine />

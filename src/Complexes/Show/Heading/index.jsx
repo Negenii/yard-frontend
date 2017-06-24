@@ -8,6 +8,7 @@ const Heading = styled.section`
   padding-top: 1.5rem;
   background: #ffffff;
 `;
+
 const Title = styled.h1`
   margin-bottom: 0.7rem;
   margin-top: 0;

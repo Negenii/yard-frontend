@@ -20,7 +20,7 @@ export default () => (
     <Grid>
       <Row>
         <Col xs={6}>
-          <Image src="/images/googlemap.png" alt="" />
+          <Image src={process.env.PUBLIC_URL + '/images/googlemap.png'} alt="" />
         </Col>
         <Col xs={6}>
           <List />

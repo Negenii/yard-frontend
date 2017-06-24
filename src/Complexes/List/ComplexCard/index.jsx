@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { Row, Col } from 'react-flexbox-grid';
 import styled from 'styled-components';
 
@@ -20,6 +20,7 @@ const Image = styled.img`
   width: 484px;
   height: 350px;
 `;
+
 const Description = styled.div`
   padding: 1.5rem 6.25rem 1.5rem 1rem;
   background-color: #fff;
@@ -54,21 +55,19 @@ const Info = styled.p`
 
 export default (props) => {
   return (
-    <Router>
-      <Row>
-        <Col xs={12}>
-          <CardLink to={`/complex/${props.id}`}>
-            <Image src={props.imageUrl} alt="complex" />
-            <Description>
-              <Address>SOUTH BEACH, SAN FRANCISCO</Address>
-              <Title>The Harrison</Title>
-              <Info>
-                Beautifully appointed residences perched atop Rincon Hill, The Harrison offers unparalleled Bay Bridge and city views within steps of San Francisco’s greatest restaurants, shops, and The Embarcadero.
-              </Info>
-            </Description>
-          </CardLink>
-        </Col>
-      </Row>
-    </Router>
+    <Row>
+      <Col xs={12}>
+        <CardLink to={`/complex/${props.id}`}>
+          <Image src={props.imageUrl} alt="complex" />
+          <Description>
+            <Address>SOUTH BEACH, SAN FRANCISCO</Address>
+            <Title>The Harrison</Title>
+            <Info>
+              Beautifully appointed residences perched atop Rincon Hill, The Harrison offers unparalleled Bay Bridge and city views within steps of San Francisco’s greatest restaurants, shops, and The Embarcadero.
+            </Info>
+          </Description>
+        </CardLink>
+      </Col>
+    </Row>
   );
 };

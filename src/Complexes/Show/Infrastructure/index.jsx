@@ -3,7 +3,7 @@ import { Grid, Row, Col } from 'react-flexbox-grid';
 import styled from 'styled-components';
 
 const Infrastructure = styled.section`
-    padding-bottom: 3.5rem;
+  padding-bottom: 3.5rem;
 `;
 
 const Wrapper = styled.div`
@@ -22,11 +22,11 @@ const Title = styled.h2`
   color: #3e4247;
 `;
 
-const Items = styled.div`
+const Units = styled.div`
   margin-top: 1rem;
 `;
 
-const Item = styled.p`
+const Unit = styled.p`
   margin-top: 0;
   margin-bottom: 0.5rem;
   line-height: 1.38;
@@ -38,34 +38,34 @@ export default () => (
     <Grid>
       <Wrapper>
         <Title>Инфраструктура</Title>
-        <Items>
+        <Units>
           <Row>
             <Col xs={2}>
-              <Item>Бассейн</Item>
-              <Item>Частная школа</Item>
+              <Unit>Бассейн</Unit>
+              <Unit>Частная школа</Unit>
             </Col>
             <Col xs={2}>
-              <Item>Бассейн</Item>
-              <Item>Частная школа</Item>
+              <Unit>Бассейн</Unit>
+              <Unit>Частная школа</Unit>
             </Col>
             <Col xs={2}>
-              <Item>Бассейн</Item>
-              <Item>Частная школа</Item>
+              <Unit>Бассейн</Unit>
+              <Unit>Частная школа</Unit>
             </Col>
             <Col xs={2}>
-              <Item>Бассейн</Item>
-              <Item>Частная школа</Item>
+              <Unit>Бассейн</Unit>
+              <Unit>Частная школа</Unit>
             </Col>
             <Col xs={2}>
-              <Item>Бассейн</Item>
-              <Item>Частная школа</Item>
+              <Unit>Бассейн</Unit>
+              <Unit>Частная школа</Unit>
             </Col>
             <Col xs={2}>
-              <Item>Бассейн</Item>
-              <Item>Частная школа</Item>
+              <Unit>Бассейн</Unit>
+              <Unit>Частная школа</Unit>
             </Col>
           </Row>
-        </Items>
+        </Units>
       </Wrapper>
     </Grid>
   </Infrastructure>
