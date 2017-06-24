@@ -42,26 +42,38 @@ export default () => (
           <Row>
             <Col xs={2}>
               <Unit>Бассейн</Unit>
+            </Col>
+            <Col xs={2}>
               <Unit>Частная школа</Unit>
             </Col>
             <Col xs={2}>
               <Unit>Бассейн</Unit>
+            </Col>
+            <Col xs={2}>
               <Unit>Частная школа</Unit>
             </Col>
             <Col xs={2}>
               <Unit>Бассейн</Unit>
+            </Col>
+            <Col xs={2}>
               <Unit>Частная школа</Unit>
             </Col>
             <Col xs={2}>
               <Unit>Бассейн</Unit>
+            </Col>
+            <Col xs={2}>
               <Unit>Частная школа</Unit>
             </Col>
             <Col xs={2}>
               <Unit>Бассейн</Unit>
+            </Col>
+            <Col xs={2}>
               <Unit>Частная школа</Unit>
             </Col>
             <Col xs={2}>
               <Unit>Бассейн</Unit>
+            </Col>
+            <Col xs={2}>
               <Unit>Частная школа</Unit>
             </Col>
           </Row>

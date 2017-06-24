@@ -1,4 +1,3 @@
-/* eslint-disable react/jsx-filename-extension */
 import React from 'react';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 import styled from 'styled-components';
@@ -22,7 +21,7 @@ export default () => (
     <Router>
       <main>
         <Helmet>
-            <title>Compass Development</title>
+          <title>Compass Development</title>
         </Helmet>
         <Route exact path="/" component={List} />
         <Route path="/complex/" component={Show} />
