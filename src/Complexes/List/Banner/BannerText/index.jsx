@@ -1,18 +1,46 @@
 import React from 'react';
 import { Grid, Row, Col } from 'react-flexbox-grid';
+import styled from 'styled-components';
+
+const BannerText = styled.section`
+  margin-bottom: 4rem;
+  margin-top: 3rem;
+  line-height: 1.5;
+  color: #3e4247;
+`;
+
+const Title = styled.h2`
+  margin-bottom: 0;
+`;
+
+const Paragraph = styled.p`
+  line-height: 1.5rem;
+  margin-top: .5rem;
+`;
+
+const Button = styled.button`
+  padding: 0.75rem 2rem;
+  background-color: #000;
+  color: #fff;
+  border: none;
+  border-radius: 2px;
+  font-family: 'Fira Sans', sans-serif;
+`;
 
 export default () => {
   return (
-    <section className="banner-text">
+    <BannerText>
       <Grid>
         <Row center="xs">
-          <div className="col-xs-8">
-            <h2 className="banner-text-title">Discover Our New Developments</h2>
-            <p className="banner-text-paragraph">Compass brings a modern approach to new development marketing and sales. From boutique rental conversions to luxurious ground-up condominiums, browse our portfolio of current offerings.</p>
-            <button type="button" name="contact" className="banner-black-button">Contact The Team</button>
-          </div>
+          <Col xs={8}>
+            <Title>Discover Our New Developments</Title>
+            <Paragraph>
+              Compass brings a modern approach to new development marketing and sales. From boutique rental conversions to luxurious ground-up condominiums, browse our portfolio of current offerings.
+            </Paragraph>
+            <Button type="button" name="contact">Contact The Team</Button>
+          </Col>
         </Row>
       </Grid>
-    </section>
+    </BannerText>
   );
 };
