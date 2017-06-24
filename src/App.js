@@ -1,3 +1,4 @@
+/* eslint-disable react/jsx-filename-extension */
 import React from 'react';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 import styled from 'styled-components';
@@ -9,7 +10,6 @@ import Show from './Complexes/Show';
 
 // import './style.css';
 // import './complex.css';
-/* eslint-disable react/jsx-filename-extension */
 
 const Body = styled.div`
 font-family: 'Fira Sans', sans-serif;
@@ -25,7 +25,7 @@ export default () => (
       <Router>
         <div className="wrapper">
           <Route exact path="/" component={List} />
-          <Route path="/complex/:id" component={Show} />
+          <Route path="/complex/" component={Show} />
         </div>
       </Router>
       <Footer />
