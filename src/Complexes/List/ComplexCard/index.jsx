@@ -14,6 +14,10 @@ const CardLink = styled(Link)`
   margin-bottom: 3rem;
   text-decoration: none;
   background-color: #fff;
+
+  &:hover{
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, .3);
+  }
 `;
 
 const Image = styled.img`
@@ -35,6 +39,9 @@ const Address = styled.p`
 `;
 
 const Title = styled.h3`
+  font-size: 2.5rem;
+  color: #000;
+  font-weight: bold;
   margin-top: 1.75rem;
   margin-bottom: 0;
 `;
