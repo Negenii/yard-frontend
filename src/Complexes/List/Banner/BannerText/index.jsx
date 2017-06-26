@@ -25,6 +25,7 @@ const Button = styled.button`
   border: none;
   border-radius: 2px;
   font-family: 'Fira Sans', sans-serif;
+  font-size: 1rem;
 `;
 
 export default () =>
