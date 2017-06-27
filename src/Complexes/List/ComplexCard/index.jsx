@@ -19,6 +19,7 @@ const CardLink = styled(Link)`
 const Image = styled.img`
   width: 484px;
   height: 350px;
+  flex-shrink: 0;
 `;
 
 const Description = styled.div`
