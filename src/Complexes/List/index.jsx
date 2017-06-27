@@ -32,27 +32,25 @@ export default () =>
           >
             The Lewis Steel Building is a masterful industrial conversion
             located in the heart of Williamsburg. Located at 76 North 4th
-            Street, the former 1930's steel factory has been transformed into 83
+            Street, the former 1930&apos;s steel factory has been transformed into 83
             individually unique and luxury loft apartments.
           </ComplexCard>
 
           <ComplexCard
             id={2}
-            imageUrl={`${process.env
-              .PUBLIC_URL}/images/appartment-preview2@2x.jpg`}
+            imageUrl={`${process.env.PUBLIC_URL}/images/appartment-preview2@2x.jpg`}
             address={'MIDTOWN EAST, MANHATTAN'}
             title={'100 East 53rd Street'}
           >
             One Hundred East Fifty Third Street by Foster + Partners is a
-            limited collection of modern residences in Midtown Manhattan's
+            limited collection of modern residences in Midtown Manhattan&apos;s
             Cultural District. The 94 residences ranging from alcove
             lofts to four bedrooms within the 63-story tower are generously
             proportioned.
           </ComplexCard>
           <ComplexCard
             id={3}
-            imageUrl={`${process.env
-              .PUBLIC_URL}/images/appartment-preview3@2x.jpg`}
+            imageUrl={`${process.env.PUBLIC_URL}/images/appartment-preview3@2x.jpg`}
             address={'NOLITA, MANHATTAN'}
             title={'152 Elizabeth'}
           >
