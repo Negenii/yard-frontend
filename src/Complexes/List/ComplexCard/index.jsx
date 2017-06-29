@@ -57,9 +57,9 @@ export default props =>
   (<Row>
     <Col xs={12}>
       <CardLink to={`/complex/${props.id}`}>
-        <Image src={props.imageUrl} alt="complex" />
+        <Image src={`https://images.jqestate.ru/${props.imageId}-jqestate-512`} alt="complex" />
         <Description>
-          <Address>{props.address}</Address>
+          <Address>{props.subLocality}, {props.locality}</Address>
           <Title>{props.title}</Title>
           <Info>{props.children}</Info>
         </Description>
