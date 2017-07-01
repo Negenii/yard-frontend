@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Component } from 'react';
 import Heading from './Heading';
 import Gallery from './Gallery';
 import Info from './Info';
@@ -8,19 +8,43 @@ import Infrastructure from './Infrastructure';
 import Offers from './Offers';
 import Area from './Area';
 import Map from './Map';
+import { formatAddress, countImages } from '../../utils';
 
-const title = 'Жилой комплекс «Полянка/44»';
-const address = 'Район Якиманка, улица Большая Полянка, дом 44 · 119180';
+class Show extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {};
+    // console.log(props.match.params);
+  }
 
-export default () =>
-  (<div>
-    <Heading title={title} address={address} />
-    <Gallery imagesCount={41} />
-    <Info />
-    <Summary />
-    <Description />
-    <Infrastructure />
-    <Offers />
-    <Area />
-    <Map />
-  </div>);
+  componentDidMount(props) {
+    return (
+      fetch(`https://api.jqestate.ru/v1/complexes/${this.props.match.params.id}`)
+        // return fetch('https://api.jqestate.ru/v1/complexes/247')
+        .then(response => response.json())
+        .then((responseJson) => {
+          console.log(responseJson);
+          this.setState(responseJson);
+        })
+    );
+  }
+
+  render() {
+    const complex = this.state;
+    console.log(complex.location);
+    return (
+      <div>
+        <Heading title={complex.name} address={formatAddress(complex.location)} />
+        <Gallery imagesCount={countImages(complex.images)} />
+        <Info />
+        <Summary />
+        <Description />
+        <Infrastructure />
+        <Offers />
+        <Area />
+        <Map />
+      </div>
+    );
+  }
+}
+export default Show;

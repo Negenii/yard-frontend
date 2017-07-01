@@ -47,7 +47,7 @@ const Image = styled.img`
 export default () =>
   (<Area>
     <Grid>
-      <Row xs="between">
+      <Row between="xs">
         <Col xs={6}>
           <Wrapper>
             <Title>Якиманка</Title>
@@ -58,10 +58,7 @@ export default () =>
           </Wrapper>
         </Col>
         <Col xs={6}>
-          <Image
-            src={`${process.env.PUBLIC_URL}/images/yakimanka.png`}
-            alt="Якиманка"
-          />
+          <Image src={`${process.env.PUBLIC_URL}/images/yakimanka.png`} alt="Якиманка" />
         </Col>
       </Row>
     </Grid>

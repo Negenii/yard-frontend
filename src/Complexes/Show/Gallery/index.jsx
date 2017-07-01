@@ -45,7 +45,7 @@ export default props =>
       <Grid>
         <ButtonWrapper>
           <AllPhotosButton type="button" name="button">
-            {props.imagesCount} фотографии
+            {props.imagesCount}
           </AllPhotosButton>
         </ButtonWrapper>
       </Grid>
