@@ -17,6 +17,16 @@ const Cards = styled.section`
   padding-bottom: 1rem;
 `;
 
+function formatAddress(location) {
+  let address = [location.subLocalityName, location.street, location.house]
+    .filter(item => !!item)
+    .join(', ');
+
+  if (location.postalCode) address = `${address} • ${location.postalCode}`;
+
+  return address;
+}
+
 class List extends Component {
   constructor(props) {
     super(props);
@@ -36,7 +46,7 @@ class List extends Component {
 
   render() {
     const complexes = this.state;
-    console.log(complexes);
+    // console.log(complexes);
     return (
       <Body>
         <div>
@@ -50,8 +60,7 @@ class List extends Component {
                   id={complex.id}
                   title={complex.name}
                   imageId={complex.images[0].id}
-                  subLocality={complex.location.subLocalityName}
-                  locality={complex.location.localityName}
+                  address={formatAddress(complex.location)}
                 >
                   The Lewis Steel Building is a masterful industrial conversion located in the heart
                   of

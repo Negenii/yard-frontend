@@ -59,7 +59,7 @@ export default props =>
       <CardLink to={`/complex/${props.id}`}>
         <Image src={`https://images.jqestate.ru/${props.imageId}-jqestate-512`} alt="complex" />
         <Description>
-          <Address>{props.subLocality}, {props.locality}</Address>
+          <Address>{props.address}</Address>
           <Title>{props.title}</Title>
           <Info>{props.children}</Info>
         </Description>
