@@ -9,8 +9,10 @@
     }
   },
   "dependencies": {
+    "install": "^0.10.1",
     "lint": "^1.1.2",
     "normalize.css": "^7.0.0",
+    "pluralize": "^5.0.0",
     "prettier-eslint": "^6.3.0",
     "react": "^15.6.1",
     "react-body-classname": "^1.2.0",
