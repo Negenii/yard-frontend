@@ -19,17 +19,17 @@ export function getImageUrl(id = 'none', size = '512') {
 
 export function countImages(images = '0') {
   const numberLength = Object.keys(images).length;
-  console.log(`numberLength: ${numberLength}`);
+  // console.log(`numberLength: ${numberLength}`);
   const numberString = numberLength.toString();
-  console.log(`numberString: ${numberString}`);
+  // console.log(`numberString: ${numberString}`);
   let lastchar = '';
-  console.log(numberString);
+  // console.log(numberString);
   if (numberLength > 9) {
     lastchar = numberString.charAt(numberString - 1);
-    console.log(`lastchar >1 and: ${lastchar}`);
+    // console.log(`lastchar >1 and: ${lastchar}`);
   } else {
     lastchar = numberString;
-    console.log(`lastchar else and: ${lastchar}`);
+    // console.log(`lastchar else and: ${lastchar}`);
   }
   if (Object.keys(images).length === 0) {
     return 'Нет фотографий';

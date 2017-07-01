@@ -17,7 +17,7 @@ class Show extends Component {
     // console.log(props.match.params);
   }
 
-  componentDidMount(props) {
+  componentDidMount() {
     return (
       fetch(`https://api.jqestate.ru/v1/complexes/${this.props.match.params.id}`)
         // return fetch('https://api.jqestate.ru/v1/complexes/247')
