@@ -1,6 +1,7 @@
 import React from 'react';
 import { Grid } from 'react-flexbox-grid';
 import styled from 'styled-components';
+import { getImageUrl, countImages } from '../../../utils';
 
 const Gallery = styled.section``;
 const ImagesWrapper = styled.div`
@@ -9,7 +10,9 @@ const ImagesWrapper = styled.div`
   overflow: scroll;
 `;
 
-const Image = styled.img``;
+const Image = styled.img`
+  height: 400px;
+`;
 
 const ButtonWrapper = styled.div`
   position: absolute;
@@ -36,16 +39,12 @@ export default props =>
   (<div>
     <Gallery>
       <ImagesWrapper>
-        <Image src="/images/bitmap-1.png" alt="" />
-        <Image src="/images/bitmap-2.png" alt="" />
-        <Image src="/images/bitmap-3.png" alt="" />
-        <Image src="/images/bitmap-4.png" alt="" />
-        <Image src="/images/bitmap-5.png" alt="" />
+        {props.images.map(image => <Image src={getImageUrl(image.id)} alt="Slider image" />)}
       </ImagesWrapper>
       <Grid>
         <ButtonWrapper>
           <AllPhotosButton type="button" name="button">
-            {props.imagesCount}
+            {countImages(props.images)}
           </AllPhotosButton>
         </ButtonWrapper>
       </Grid>

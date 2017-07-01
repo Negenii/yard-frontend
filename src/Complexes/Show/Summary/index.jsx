@@ -47,7 +47,7 @@ const Value = styled.dd`
   color: #3e4247;
 `;
 
-export default () =>
+export default props =>
   (<Summary>
     <Grid>
       <Title>Характеристики</Title>
@@ -55,8 +55,8 @@ export default () =>
         <Row>
           <Col xs={4}>
             <SummaryItem>
-              <ItemTitle>Количество квартир:</ItemTitle>
-              <Value>1 503</Value>
+              <ItemTitle>Количество квартир: </ItemTitle>
+              <Value>{props.appartmentCount}</Value>
             </SummaryItem>
             <SummaryItem>
               <ItemTitle>Статус:</ItemTitle>
