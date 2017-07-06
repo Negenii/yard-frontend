@@ -2,8 +2,7 @@ import React from 'react';
 import { Grid, Row, Col } from 'react-flexbox-grid';
 import styled from 'styled-components';
 import Card from './Card';
-
-// TODO: Props as an object
+import { formatPrice } from '../../../utils';
 
 const Offers = styled.section`
   padding-top: 3.75rem;
@@ -22,21 +21,33 @@ const Title = styled.h2`
   color: #3e4247;
 `;
 
-export default () =>
+export default props =>
   (<Offers>
     <Grid>
       <Row center="xs">
-        <Title>Предложения в ЖК «Полянка/44»</Title>
+        <Title>Предложения в «{props.title}»</Title>
       </Row>
       <Row>
         <Col xs={4}>
-          <Card rooms="1" square={{ min: 59, max: 120 }} price={{ min: 20.3, max: 84.2 }} />
+          <Card
+            rooms="1"
+            price={{ min: formatPrice(props.from.rub), max: formatPrice(props.to.rub) }}
+            square={{ min: 20.3, max: 84.2 }}
+          />
         </Col>
         <Col xs={4}>
-          <Card rooms="2" square={{ min: 59, max: 120 }} price={{ min: 20.3, max: 84.2 }} />
+          <Card
+            rooms="2"
+            price={{ min: formatPrice(props.from.rub), max: formatPrice(props.to.rub) }}
+            square={{ min: 20.3, max: 84.2 }}
+          />
         </Col>
         <Col xs={4}>
-          <Card rooms="3" square={{ min: 59, max: 120 }} price={{ min: 20.3, max: 84.2 }} />
+          <Card
+            rooms="3"
+            price={{ min: formatPrice(props.from.rub), max: formatPrice(props.to.rub) }}
+            square={{ min: 20.3, max: 84.2 }}
+          />
         </Col>
       </Row>
     </Grid>

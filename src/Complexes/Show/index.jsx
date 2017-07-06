@@ -9,34 +9,29 @@ import Offers from './Offers';
 import Area from './Area';
 import Map from './Map';
 import { formatAddress } from '../../utils';
+import get from '../../api';
 
 class Show extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {};
-  }
-
   componentDidMount() {
-    return fetch(`https://api.jqestate.ru/v1/complexes/${this.props.match.params.id}`)
-      .then(response => response.json())
-      .then((responseJson) => {
-        this.setState(responseJson);
-      });
+    get(`complexes/${this.props.match.params.id}`).then((responseJson) => {
+      this.setState(responseJson);
+    });
   }
 
   render() {
     const { name, images = [], location = {}, statistics = {} } = this.state;
     const { price = {} } = statistics;
     const { from = {}, to = {} } = price;
+
     return (
       <div>
         <Heading title={name} address={formatAddress(location)} />
         <Gallery images={images} />
         <Info />
-        <Summary appartmentCount={statistics.propertiesCount} />
+        <Summary statistics={statistics} from={from.rub} to={to.rub} />
         <Description />
         <Infrastructure />
-        <Offers />
+        <Offers title={name} price={price} from={from} to={to} />
         <Area />
         <Map />
       </div>

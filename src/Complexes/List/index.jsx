@@ -7,6 +7,7 @@ import ComplexCard from './ComplexCard';
 import Banner from './Banner';
 import BannerText from './Banner/BannerText';
 import { formatAddress, getImageUrl } from '../../utils';
+import get from '../../api';
 
 const Body = styled(BodyClassName)`
   background-color: #eaebf0;
@@ -19,24 +20,14 @@ const Cards = styled.section`
 `;
 
 class List extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      items: [],
-    };
-  }
-
   componentDidMount() {
-    return fetch('https://api.jqestate.ru/v1/complexes?filter[state]=public')
-      .then(response => response.json())
-      .then((responseJson) => {
-        // console.log(responseJson);
-        this.setState({ items: responseJson.items });
-      });
+    get('complexes?filter[state]=public').then(({ items: complexes = [] }) => {
+      this.setState({ complexes });
+    });
   }
 
   render() {
-    const complexes = this.state;
+    const { complexes = [] } = this.state;
     // console.log(complexes);
     return (
       <Body>
@@ -45,7 +36,7 @@ class List extends Component {
           <BannerText />
           <Cards>
             <Grid>
-              {complexes.items.map(complex =>
+              {complexes.map(complex =>
                 (<ComplexCard
                   key={complex.id}
                   id={complex.id}

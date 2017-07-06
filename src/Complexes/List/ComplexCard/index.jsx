@@ -53,15 +53,15 @@ const Info = styled.p`
   margin-right: 2rem;
 `;
 
-export default props =>
+export default ({ id, imageUrl, title, address, children }) =>
   (<Row>
     <Col xs={12}>
-      <CardLink to={`/complex/${props.id}`}>
-        <Image src={props.imageUrl} alt="complex" />
+      <CardLink to={`/complex/${id}`}>
+        <Image src={imageUrl} alt="complex" />
         <Description>
-          <Address>{props.address}</Address>
-          <Title>{props.title}</Title>
-          <Info>{props.children}</Info>
+          <Address>{address}</Address>
+          <Title>{title}</Title>
+          <Info>{children}</Info>
         </Description>
       </CardLink>
     </Col>

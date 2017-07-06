@@ -1,6 +1,7 @@
 import React from 'react';
 import { Grid, Row, Col } from 'react-flexbox-grid';
 import styled from 'styled-components';
+import { formatPrice } from '../../../utils';
 
 const Summary = styled.section`
   background: #fff;
@@ -56,7 +57,7 @@ export default props =>
           <Col xs={4}>
             <SummaryItem>
               <ItemTitle>Количество квартир: </ItemTitle>
-              <Value>{props.appartmentCount}</Value>
+              <Value>{props.statistics.propertiesCount}</Value>
             </SummaryItem>
             <SummaryItem>
               <ItemTitle>Статус:</ItemTitle>
@@ -64,7 +65,9 @@ export default props =>
             </SummaryItem>
             <SummaryItem>
               <ItemTitle>Цены:</ItemTitle>
-              <Value>от 5.3 до 143.5 млн</Value>
+              <Value>
+                от {formatPrice(props.from)} млн до {formatPrice(props.to)} млн
+              </Value>
             </SummaryItem>
           </Col>
           <Col xs={4}>
