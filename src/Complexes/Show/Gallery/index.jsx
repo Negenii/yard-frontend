@@ -1,7 +1,8 @@
 import React from 'react';
 import { Grid } from 'react-flexbox-grid';
+import Pluralize from 'react-pluralize';
 import styled from 'styled-components';
-import { getImageUrl, countImages } from '../../../utils';
+import { getImageUrl, declenNum } from '../../../utils';
 
 const Gallery = styled.section``;
 const ImagesWrapper = styled.div`
@@ -44,7 +45,8 @@ export default props =>
       <Grid>
         <ButtonWrapper>
           <AllPhotosButton type="button" name="button">
-            {countImages(props.images)}
+            {props.images.length}{' '}
+            {declenNum(['фотография', 'фотографии', 'фотографий'])(props.images.length)}
           </AllPhotosButton>
         </ButtonWrapper>
       </Grid>
