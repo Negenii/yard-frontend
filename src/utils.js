@@ -1,10 +1,13 @@
 /* eslint-disable import/prefer-default-export*/
 export function formatAddress(location = {}) {
-  let address = [location.subLocalityName, location.street, location.house]
+  const address = [location.subLocalityName, location.street, location.house]
     .filter(item => !!item)
     .join(', ');
 
-  if (location.postalCode) address = `${address} · ${location.postalCode}`;
+  if (location.postalCode) {
+    const postalAddress = `${address} · ${location.postalCode}`;
+    return postalAddress;
+  }
   return address;
 }
 
