@@ -1,6 +1,5 @@
 import React from 'react';
 import { Grid } from 'react-flexbox-grid';
-import Pluralize from 'react-pluralize';
 import styled from 'styled-components';
 import { getImageUrl, declenNum } from '../../../utils';
 
