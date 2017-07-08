@@ -1,7 +1,11 @@
+// @flow
 import React from 'react';
 import { Grid } from 'react-flexbox-grid';
 import styled from 'styled-components';
+
 import { getImageUrl, declenNum } from '../../utils';
+import AllPhotosButton from './AllPhotosButton';
+import type { ImagesType } from '../../types';
 
 const Gallery = styled.section``;
 const ImagesWrapper = styled.div`
@@ -34,7 +38,12 @@ const AllPhotosButton = styled.button`
   font-weight: 300;
   cursor: pointer;
 `;
-export default props =>
+
+type Props = {
+  images: ImagesType,
+};
+
+export default (props: Props) =>
   (<div>
     <Gallery>
       <ImagesWrapper>
