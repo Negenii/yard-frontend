@@ -21,14 +21,14 @@ const Cards = styled.section`
 `;
 
 class List extends Component {
-  state: { complexes: Array<ComplexType> } = { complexes: [] };
-
   componentDidMount() {
     get('complexes?filter[state]=public').then(({ items: complexes = [] }) => {
       this.setState({ complexes });
     });
   }
-
+  //this won't cause error after adding flow
+  // eslint-disable-next-line
+  state = { complexes: [] };
   render() {
     const { complexes = [] } = this.state;
     // console.log(complexes);

@@ -6,6 +6,7 @@ module.exports = {
     browser: true,
     node: true,
   },
+  parser: 'babel-eslint',
   rules: {
     'react/prop-types': 0,
   },
