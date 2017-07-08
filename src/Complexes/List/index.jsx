@@ -1,3 +1,4 @@
+// @flow
 import React, { Component } from 'react';
 import BodyClassName from 'react-body-classname';
 import { Grid } from 'react-flexbox-grid';
@@ -20,6 +21,8 @@ const Cards = styled.section`
 `;
 
 class List extends Component {
+  state = { complexes: [] };
+
   componentDidMount() {
     get('complexes?filter[state]=public').then(({ items: complexes = [] }) => {
       this.setState({ complexes });
@@ -37,7 +40,7 @@ class List extends Component {
           <Cards>
             <Grid>
               {complexes.map(complex =>
-                (<ComplexCard
+                <ComplexCard
                   key={complex.id}
                   id={complex.id}
                   title={complex.name}
@@ -49,7 +52,7 @@ class List extends Component {
                   Williamsburg. Located at 76 North 4th Street, the former 1930s steel factory has
                   been
                   transformed into 83 individually unique and luxury loft apartments.
-                </ComplexCard>),
+                </ComplexCard>,
               )}
             </Grid>
           </Cards>

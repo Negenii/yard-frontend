@@ -12,8 +12,12 @@ import { formatAddress } from '../../utils';
 import get from '../../api';
 
 class Show extends Component {
+  state = {};
+
+  state: ComplexType;
+
   componentDidMount() {
-    get(`complexes/${this.props.match.params.id}`).then((responseJson) => {
+    get(`complexes/${this.props.match.params.id}`).then(responseJson => {
       this.setState(responseJson);
     });
   }
