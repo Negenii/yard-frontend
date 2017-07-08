@@ -9,6 +9,7 @@ import Banner from './Banner';
 import BannerText from './Banner/BannerText';
 import { formatAddress, getImageUrl } from '../../utils';
 import get from '../../api';
+import type { ComplexType } from '../types';
 
 const Body = styled(BodyClassName)`
   background-color: #eaebf0;
@@ -21,7 +22,7 @@ const Cards = styled.section`
 `;
 
 class List extends Component {
-  state = { complexes: [] };
+  state: { complexes: Array<ComplexType> } = { complexes: [] };
 
   componentDidMount() {
     get('complexes?filter[state]=public').then(({ items: complexes = [] }) => {

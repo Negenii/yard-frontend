@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import { declenNum } from '../../../../utils';
+import { ImagesType } from '../../../types';
 
 const AllPhotosButton = styled.button`
   padding-top: 0.5rem;
@@ -17,7 +18,11 @@ const AllPhotosButton = styled.button`
   font-weight: 300;
   cursor: pointer;
 `;
-export default props =>
+type Props = {
+  images: ImagesType,
+};
+
+export default (props: Props) =>
   (<AllPhotosButton type="button" name="button">
     {props.images.length}{' '}
     {declenNum(['фотография', 'фотографии', 'фотографий'])(props.images.length)}

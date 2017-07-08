@@ -1,5 +1,8 @@
+// @flow
 /* eslint-disable import/prefer-default-export*/
-export function formatAddress(location = {}) {
+import type { LocationType } from './Complexes/types';
+
+export function formatAddress(location: LocationType = {}) {
   const address = [location.subLocalityName, location.street, location.house]
     .filter(item => !!item)
     .join(', ');
@@ -11,7 +14,7 @@ export function formatAddress(location = {}) {
   return address;
 }
 
-export function getImageUrl(id, size = 512) {
+export function getImageUrl(id: string, size: number = 512) {
   if (id) {
     return `https://images.jqestate.ru/${id}-jqestate-${size}`;
   }
@@ -19,15 +22,15 @@ export function getImageUrl(id, size = 512) {
 }
 
 // function declension of numerals
-export function declenNum(titles) {
+export function declenNum(numeral: number, declensions: Array<string>): string {
   const cases = [2, 0, 1, 1, 1, 2];
   return function curry(number) {
-    return titles[
+    return declensions[
       number % 100 > 4 && number % 100 < 20 ? 2 : cases[number % 10 < 5 ? number % 10 : 5]
     ];
   };
 }
 
-export function formatPrice(price = 0) {
+export function formatPrice(price: number = 0) {
   return Math.round(price / 1000000) / 10;
 }
