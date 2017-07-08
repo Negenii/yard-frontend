@@ -26,12 +26,10 @@ class List extends Component {
       this.setState({ complexes });
     });
   }
-  //this won't cause error after adding flow
-  // eslint-disable-next-line
+
   state = { complexes: [] };
   render() {
     const { complexes = [] } = this.state;
-    // console.log(complexes);
     return (
       <Body>
         <div>
@@ -40,7 +38,7 @@ class List extends Component {
           <Cards>
             <Grid>
               {complexes.map(complex =>
-                <ComplexCard
+                (<ComplexCard
                   key={complex.id}
                   id={complex.id}
                   title={complex.name}
@@ -52,7 +50,7 @@ class List extends Component {
                   Williamsburg. Located at 76 North 4th Street, the former 1930s steel factory has
                   been
                   transformed into 83 individually unique and luxury loft apartments.
-                </ComplexCard>,
+                </ComplexCard>),
               )}
             </Grid>
           </Cards>
