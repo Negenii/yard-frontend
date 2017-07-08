@@ -1,8 +1,8 @@
 import React from 'react';
 import { Grid, Row, Col } from 'react-flexbox-grid';
 import styled from 'styled-components';
-import Card from './Card';
-import { formatPrice } from '../../../utils';
+import Card from './OffersCard';
+import { formatPrice } from '../../utils';
 
 const Offers = styled.section`
   padding-top: 3.75rem;
