@@ -21,13 +21,14 @@ const Cards = styled.section`
 `;
 
 class List extends Component {
+  state = { complexes: [] };
+
   componentDidMount() {
     get('complexes?filter[state]=public').then(({ items: complexes = [] }) => {
       this.setState({ complexes });
     });
   }
 
-  state = { complexes: [] };
   render() {
     const { complexes = [] } = this.state;
     return (

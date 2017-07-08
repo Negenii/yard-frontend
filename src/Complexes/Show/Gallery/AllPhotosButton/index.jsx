@@ -2,11 +2,6 @@ import React from 'react';
 import styled from 'styled-components';
 import { declenNum } from '../../../../utils';
 
-const ButtonWrapper = styled.div`
-  position: absolute;
-  margin-top: -2.625rem;
-`;
-
 const AllPhotosButton = styled.button`
   padding-top: 0.5rem;
   padding-left: 1rem;
@@ -23,9 +18,7 @@ const AllPhotosButton = styled.button`
   cursor: pointer;
 `;
 export default props =>
-  (<ButtonWrapper>
-    <AllPhotosButton type="button" name="button">
-      {props.images.length}{' '}
-      {declenNum(['фотография', 'фотографии', 'фотографий'])(props.images.length)}
-    </AllPhotosButton>
-  </ButtonWrapper>);
+  (<AllPhotosButton type="button" name="button">
+    {props.images.length}{' '}
+    {declenNum(['фотография', 'фотографии', 'фотографий'])(props.images.length)}
+  </AllPhotosButton>);

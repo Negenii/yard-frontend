@@ -15,6 +15,11 @@ const Image = styled.img`
   height: 400px;
 `;
 
+const ButtonWrapper = styled.div`
+  position: absolute;
+  margin-top: -2.625rem;
+`;
+
 export default props =>
   (<div>
     <Gallery>
@@ -22,7 +27,9 @@ export default props =>
         {props.images.map(image => <Image src={getImageUrl(image.id)} alt="Slider image" />)}
       </ImagesWrapper>
       <Grid>
-        <AllPhotosButton images={props.images} />
+        <ButtonWrapper>
+          <AllPhotosButton images={props.images} />
+        </ButtonWrapper>
       </Grid>
     </Gallery>
   </div>);
