@@ -25,6 +25,8 @@
 <a href="https://flow.org">
   <img src="https://res.cloudinary.com/barbagrigia/image/upload/v1499332421/flow-logo_nwu6ow.png" height="64px" alt="flow" title="Flow" />
 </a>
+<div>
+<div align="left">
 
 ## Install
 `yarn install` installs dependencies.
@@ -60,3 +62,4 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ## MIT License
 Copyright © 2017 [Evgeny Ugreninov](https://github.com/negenii)
+</div>
