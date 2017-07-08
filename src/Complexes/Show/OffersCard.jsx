@@ -1,7 +1,7 @@
 // @flow
 import React from 'react';
 import styled from 'styled-components';
-import type { StatisticsType } from '../../../types';
+import type { StatisticsType } from '../types';
 
 const Card = styled.div`
   margin-top: 1rem;

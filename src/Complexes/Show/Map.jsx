@@ -2,7 +2,7 @@
 import React from 'react';
 import { Grid, Row, Col } from 'react-flexbox-grid';
 import styled from 'styled-components';
-import List from './List';
+import List from './MapList';
 
 const Map = styled.section`
   margin-top: -9.75rem;
