@@ -20,11 +20,12 @@ const Cards = styled.section`
 `;
 
 class List extends Component {
-  state: {};
+  state = { complexes: [] };
 
   componentDidMount() {
     get('complexes?filter%5Bstate%5D=public').then(({ items: complexes = [] }) => {
       this.setState({ complexes });
+      console.log(complexes);
     });
   }
 
