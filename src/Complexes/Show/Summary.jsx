@@ -1,7 +1,7 @@
 import React from 'react';
 import { Grid, Row, Col } from 'react-flexbox-grid';
 import styled from 'styled-components';
-import { formatPrice } from '../../../utils';
+import { formatPrice } from '../../utils';
 
 const Summary = styled.section`
   background: #fff;

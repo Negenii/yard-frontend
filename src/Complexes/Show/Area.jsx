@@ -44,6 +44,8 @@ const Image = styled.img`
   width: 100%;
 `;
 
+const PUBLIC_URL: string = process.env.PUBLIC_URL || '';
+
 export default () =>
   (<Area>
     <Grid>
@@ -58,7 +60,7 @@ export default () =>
           </Wrapper>
         </Col>
         <Col xs={6}>
-          <Image src={`${process.env.PUBLIC_URL}/images/yakimanka.png`} alt="Якиманка" />
+          <Image src={`${PUBLIC_URL}/images/yakimanka.png`} alt="Якиманка" />
         </Col>
       </Row>
     </Grid>

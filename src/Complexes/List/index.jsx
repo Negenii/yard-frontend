@@ -1,4 +1,3 @@
-// @flow
 import React, { Component } from 'react';
 import BodyClassName from 'react-body-classname';
 import { Grid } from 'react-flexbox-grid';
@@ -21,10 +20,10 @@ const Cards = styled.section`
 `;
 
 class List extends Component {
-  state = { complexes: [] };
+  state: {};
 
   componentDidMount() {
-    get('complexes?filter[state]=public').then(({ items: complexes = [] }) => {
+    get('complexes?filter%5Bstate%5D=public').then(({ items: complexes = [] }) => {
       this.setState({ complexes });
     });
   }
