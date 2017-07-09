@@ -1,4 +1,5 @@
-import React from 'react';
+// @flow
+import React, { Component } from 'react';
 import Heading from './Heading';
 import Gallery from './Gallery';
 import Info from './Info';
@@ -8,19 +9,40 @@ import Infrastructure from './Infrastructure';
 import Offers from './Offers';
 import Area from './Area';
 import Map from './Map';
+import { formatAddress } from '../../utils';
+import get from '../../api';
+import type { ComplexType, StatisticsType } from '../types';
 
-const title = 'Жилой комплекс «Полянка/44»';
-const address = 'Район Якиманка, улица Большая Полянка, дом 44 · 119180';
+class Show extends Component {
+  state = {};
 
-export default () =>
-  (<div>
-    <Heading title={title} address={address} />
-    <Gallery imagesCount={41} />
-    <Info />
-    <Summary />
-    <Description />
-    <Infrastructure />
-    <Offers />
-    <Area />
-    <Map />
-  </div>);
+  state: ComplexType;
+
+  componentDidMount() {
+    get(`complexes/${this.props.match.params.id}`).then((responseJson) => {
+      this.setState(responseJson);
+    });
+  }
+  statistics: StatisticsType;
+
+  render() {
+    const { name, images = [], location = {}, statistics = {} } = this.state;
+    const { price = {} } = statistics;
+    const { from = {}, to = {} } = price;
+
+    return (
+      <div>
+        <Heading title={name} address={formatAddress(location)} />
+        <Gallery images={images} />
+        <Info />
+        <Summary statistics={statistics} from={from.rub} to={to.rub} />
+        <Description />
+        <Infrastructure />
+        <Offers name={name} statistics={statistics} />
+        <Area />
+        <Map />
+      </div>
+    );
+  }
+}
+export default Show;

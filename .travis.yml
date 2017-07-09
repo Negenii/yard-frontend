@@ -1,0 +1,22 @@
+language: node_js
+node_js:
+  - stable
+os: osx
+cache:
+  yarn: true
+  directories:
+    - node_modules
+    - flow-typed
+install:
+  - yarn install
+  - yarn flow-typed install
+script:
+  - yarn lint
+  - yarn flow
+deploy:
+  on:
+    branch: develop
+  provider: script
+  skip_cleanup: true
+  script:
+    - yarn deploy
