@@ -1,7 +1,6 @@
 // @flow
 import React from 'react';
 import styled from 'styled-components';
-import type { StatisticsType } from '../types';
 
 const Card = styled.div`
   margin-top: 1rem;
@@ -62,7 +61,15 @@ const Button = styled.button`
 `;
 
 type Props = {
-  square: StatisticsType,
+  rooms: number,
+  square: {
+    min?: number,
+    max?: number,
+  },
+  price: {
+    min?: number,
+    max?: number,
+  },
 };
 
 export default (props: Props) =>

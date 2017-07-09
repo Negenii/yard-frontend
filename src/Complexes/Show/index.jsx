@@ -38,7 +38,7 @@ class Show extends Component {
         <Summary statistics={statistics} from={from.rub} to={to.rub} />
         <Description />
         <Infrastructure />
-        <Offers title={name} price={price} from={from} to={to} />
+        <Offers title={name} statistics={statistics} />
         <Area />
         <Map />
       </div>

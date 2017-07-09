@@ -17,7 +17,7 @@ export type LocationType = {
 };
 
 export type ImagesType = Array<{
-  id: string,
+  id: number,
   isPublic?: boolean,
 }>;
 

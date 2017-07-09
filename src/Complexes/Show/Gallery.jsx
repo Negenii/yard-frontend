@@ -4,8 +4,7 @@ import { Grid } from 'react-flexbox-grid';
 import styled from 'styled-components';
 
 import { getImageUrl, declenNum } from '../../utils';
-import AllPhotosButton from './AllPhotosButton';
-import type { ImagesType } from '../../types';
+import type { ImagesType } from '../types';
 
 const Gallery = styled.section``;
 const ImagesWrapper = styled.div`
@@ -53,7 +52,7 @@ export default (props: Props) =>
         <ButtonWrapper>
           <AllPhotosButton type="button" name="button">
             {props.images.length}{' '}
-            {declenNum(['фотография', 'фотографии', 'фотографий'])(props.images.length)}
+            {declenNum(['фотография', 'фотографии', 'фотографий'], props.images.length)}
           </AllPhotosButton>
         </ButtonWrapper>
       </Grid>

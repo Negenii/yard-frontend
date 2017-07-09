@@ -4,7 +4,7 @@ import { Grid, Row, Col } from 'react-flexbox-grid';
 import styled from 'styled-components';
 import Card from './OffersCard';
 import { formatPrice } from '../../utils';
-import type { StatisticsType } from '../types';
+import type { StatisticsType } from './../types';
 
 const Offers = styled.section`
   padding-top: 3.75rem;
@@ -22,39 +22,44 @@ const Title = styled.h2`
   line-height: 1;
   color: #3e4247;
 `;
-type Props = {
-  title: string,
-  from: StatisticsType,
-};
 
-export default (props: Props) =>
-  (<Offers>
-    <Grid>
-      <Row center="xs">
-        <Title>Предложения в «{props.title}»</Title>
-      </Row>
-      <Row>
-        <Col xs={4}>
-          <Card
-            rooms="1"
-            price={{ min: formatPrice(props.from.rub), max: formatPrice(props.to.rub) }}
-            square={{ min: 20.3, max: 84.2 }}
-          />
-        </Col>
-        <Col xs={4}>
-          <Card
-            rooms="2"
-            price={{ min: formatPrice(props.from.rub), max: formatPrice(props.to.rub) }}
-            square={{ min: 20.3, max: 84.2 }}
-          />
-        </Col>
-        <Col xs={4}>
-          <Card
-            rooms="3"
-            price={{ min: formatPrice(props.from.rub), max: formatPrice(props.to.rub) }}
-            square={{ min: 20.3, max: 84.2 }}
-          />
-        </Col>
-      </Row>
-    </Grid>
-  </Offers>);
+type Props = {
+  statistics: StatisticsType,
+};
+export default ({ statistics }: Props) => {
+  const { price = {} } = statistics;
+  const { from: priceFrom = {}, to: priceTo = {} } = price;
+
+  return (
+    <Offers>
+      <Grid>
+        <Row center="xs">
+          <Title>Предложения в «»</Title>
+        </Row>
+        <Row>
+          <Col xs={4}>
+            <Card
+              rooms={1}
+              price={{ min: formatPrice(priceFrom.rub), max: formatPrice(priceTo.rub) }}
+              square={{ min: 20.3, max: 84.2 }}
+            />
+          </Col>
+          <Col xs={4}>
+            <Card
+              rooms={2}
+              price={{ min: formatPrice(priceFrom.rub), max: formatPrice(priceTo.rub) }}
+              square={{ min: 20.3, max: 84.2 }}
+            />
+          </Col>
+          <Col xs={4}>
+            <Card
+              rooms={3}
+              price={{ min: formatPrice(priceFrom.rub), max: formatPrice(priceTo.rub) }}
+              square={{ min: 20.3, max: 84.2 }}
+            />
+          </Col>
+        </Row>
+      </Grid>
+    </Offers>
+  );
+};
