@@ -37,6 +37,6 @@
     "lint": "eslint src/ --ext .jsx --ext .js",
     "precommit": "yarn lint",
     "prerush": "yarn lint",
-    "deploy": "yarn build && cd build && now --public --name yarrr"
+    "deploy": "yarn build && cd build && now --public --name yarrr --alias yarrr"
   }
 }

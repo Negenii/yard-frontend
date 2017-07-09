@@ -25,8 +25,9 @@ const Title = styled.h2`
 
 type Props = {
   statistics: StatisticsType,
+  name: string,
 };
-export default ({ statistics }: Props) => {
+export default ({ statistics, name }: Props) => {
   const { price = {} } = statistics;
   const { from: priceFrom = {}, to: priceTo = {} } = price;
 
@@ -34,7 +35,7 @@ export default ({ statistics }: Props) => {
     <Offers>
       <Grid>
         <Row center="xs">
-          <Title>Предложения в «»</Title>
+          <Title>Предложения в «{name}»</Title>
         </Row>
         <Row>
           <Col xs={4}>
