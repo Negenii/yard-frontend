@@ -1,3 +1,4 @@
+// @flow
 import React, { Component } from 'react';
 import Heading from './Heading';
 import Gallery from './Gallery';
@@ -10,15 +11,19 @@ import Area from './Area';
 import Map from './Map';
 import { formatAddress } from '../../utils';
 import get from '../../api';
+import type { ComplexType, StatisticsType } from '../types';
 
 class Show extends Component {
   state = {};
+
+  state: ComplexType;
 
   componentDidMount() {
     get(`complexes/${this.props.match.params.id}`).then((responseJson) => {
       this.setState(responseJson);
     });
   }
+  statistics: StatisticsType;
 
   render() {
     const { name, images = [], location = {}, statistics = {} } = this.state;

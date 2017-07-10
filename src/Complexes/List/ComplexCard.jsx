@@ -1,3 +1,4 @@
+// @flow
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Row, Col } from 'react-flexbox-grid';
@@ -53,7 +54,16 @@ const Info = styled.p`
   margin-right: 2rem;
 `;
 
-export default ({ id, imageUrl, title, address, children }) =>
+
+type props = {
+  id: number,
+  imageUrl: string,
+  title: string,
+  address: string,
+  children: string,
+};
+
+export default ({ id, imageUrl, title, address, children }: props) =>
   (<Row>
     <Col xs={12}>
       <CardLink to={`/complex/${id}`}>

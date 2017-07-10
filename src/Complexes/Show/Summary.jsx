@@ -1,7 +1,11 @@
+// @flow
 import React from 'react';
 import { Grid, Row, Col } from 'react-flexbox-grid';
 import styled from 'styled-components';
 import { formatPrice } from '../../utils';
+
+import type { StatisticsType } from '../types';
+
 
 const Summary = styled.section`
   background: #fff;
@@ -48,7 +52,13 @@ const Value = styled.dd`
   color: #3e4247;
 `;
 
-export default props =>
+type Props = {
+  statistics: StatisticsType,
+  from: number,
+  to: number,
+};
+
+export default (props: Props) =>
   (<Summary>
     <Grid>
       <Title>Характеристики</Title>

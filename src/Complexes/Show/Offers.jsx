@@ -1,8 +1,13 @@
+
+// @flow
+
 import React from 'react';
 import { Grid, Row, Col } from 'react-flexbox-grid';
 import styled from 'styled-components';
 import Card from './OffersCard';
 import { formatPrice } from '../../utils';
+import type { StatisticsType } from './../types';
+
 
 const Offers = styled.section`
   padding-top: 3.75rem;
@@ -21,7 +26,11 @@ const Title = styled.h2`
   color: #3e4247;
 `;
 
-export default ({ statistics, name }) => {
+type Props = {
+  statistics: StatisticsType,
+  name: string,
+};
+export default ({ statistics, name }: Props) => {
   const { price = {} } = statistics;
   const { from: priceFrom = {}, to: priceTo = {} } = price;
 

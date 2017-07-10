@@ -1,7 +1,9 @@
+// @flow
 import React from 'react';
 import { Grid } from 'react-flexbox-grid';
 import styled from 'styled-components';
 
+import type { ImagesType } from '../types';
 import { getImageUrl } from '../../utils';
 import AllPhotosButton from './AllPhotosButton';
 
@@ -21,7 +23,11 @@ const ButtonWrapper = styled.div`
   margin-top: -2.625rem;
 `;
 
-export default props =>
+type Props = {
+  images: ImagesType,
+};
+
+export default (props: Props) =>
   (<div>
     <Gallery>
       <ImagesWrapper>

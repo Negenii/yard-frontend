@@ -1,5 +1,8 @@
+// @flow
 /* eslint-disable import/prefer-default-export*/
-export function formatAddress(location = {}) {
+import type { LocationType } from './Complexes/types';
+
+export function formatAddress(location: LocationType = {}) {
   const address = [location.subLocalityName, location.street, location.house]
     .filter(item => !!item)
     .join(', ');
@@ -11,7 +14,7 @@ export function formatAddress(location = {}) {
   return address;
 }
 
-export function getImageUrl(id, size = 512) {
+export function getImageUrl(id: number, size: number = 512) {
   if (id) {
     return `https://s3-eu-central-1.amazonaws.com/yard-images/${id}-${size}`;
   }
@@ -19,13 +22,13 @@ export function getImageUrl(id, size = 512) {
 }
 
 // function declension of numerals
-export function declenNum(declensions, numeral): string {
+export function declenNum(declensions: Array<string>, numeral: number = 0): string {
   const cases = [2, 0, 1, 1, 1, 2];
   return `${declensions[
     numeral % 100 > 4 && numeral % 100 < 20 ? 2 : cases[numeral % 10 < 5 ? numeral % 10 : 5]
   ]}`;
 }
 
-export function formatPrice(price = 0) {
+export function formatPrice(price: number = 0) {
   return Math.round(price / 1000000) / 10;
 }
