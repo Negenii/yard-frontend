@@ -3,8 +3,10 @@ import React from 'react';
 import { Grid } from 'react-flexbox-grid';
 import styled from 'styled-components';
 
-import { getImageUrl, declenNum } from '../../utils';
 import type { ImagesType } from '../types';
+import { getImageUrl } from '../../utils';
+import AllPhotosButton from './AllPhotosButton';
+
 
 const Gallery = styled.section``;
 const ImagesWrapper = styled.div`
@@ -21,6 +23,7 @@ const ButtonWrapper = styled.div`
   position: absolute;
   margin-top: -2.625rem;
 `;
+
 
 const AllPhotosButton = styled.button`
   padding-top: 0.5rem;
@@ -50,10 +53,7 @@ export default (props: Props) =>
       </ImagesWrapper>
       <Grid>
         <ButtonWrapper>
-          <AllPhotosButton type="button" name="button">
-            {props.images.length}{' '}
-            {declenNum(['фотография', 'фотографии', 'фотографий'], props.images.length)}
-          </AllPhotosButton>
+          <AllPhotosButton type="button" name="button" images={props.images} />
         </ButtonWrapper>
       </Grid>
     </Gallery>

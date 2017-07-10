@@ -1,4 +1,3 @@
-// @flow
 import React, { Component } from 'react';
 import BodyClassName from 'react-body-classname';
 import { Grid } from 'react-flexbox-grid';

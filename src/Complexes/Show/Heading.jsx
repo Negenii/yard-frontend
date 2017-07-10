@@ -47,12 +47,14 @@ const FavsButton = styled.button`
   color: #00779a;
 `;
 
+
 type Props = {
   title: string,
   address: string,
 };
 
 export default (props: Props) =>
+
   (<Heading>
     <Grid>
       <Row between="xs">

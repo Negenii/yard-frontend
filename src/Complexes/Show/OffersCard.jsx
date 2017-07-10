@@ -73,6 +73,7 @@ type Props = {
 };
 
 export default (props: Props) =>
+
   (<Card>
     <Title>{props.rooms}-комнатные квартиры</Title>
     <Subtitle>Площадь</Subtitle>
