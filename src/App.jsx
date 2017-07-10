@@ -23,7 +23,7 @@ export default () =>
           <title>Compass Development</title>
         </Helmet>
         <Route exact path="/" component={List} />
-        <Route path="/complex/" component={Show} />
+        <Route path="/complex/:id" component={Show} />
       </main>
     </Router>
     <Footer />

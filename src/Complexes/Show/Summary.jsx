@@ -1,6 +1,11 @@
+// @flow
 import React from 'react';
 import { Grid, Row, Col } from 'react-flexbox-grid';
 import styled from 'styled-components';
+import { formatPrice } from '../../utils';
+
+import type { StatisticsType } from '../types';
+
 
 const Summary = styled.section`
   background: #fff;
@@ -47,7 +52,13 @@ const Value = styled.dd`
   color: #3e4247;
 `;
 
-export default () =>
+type Props = {
+  statistics: StatisticsType,
+  from: number,
+  to: number,
+};
+
+export default (props: Props) =>
   (<Summary>
     <Grid>
       <Title>Характеристики</Title>
@@ -55,8 +66,8 @@ export default () =>
         <Row>
           <Col xs={4}>
             <SummaryItem>
-              <ItemTitle>Количество квартир:</ItemTitle>
-              <Value>1 503</Value>
+              <ItemTitle>Количество квартир: </ItemTitle>
+              <Value>{props.statistics.propertiesCount}</Value>
             </SummaryItem>
             <SummaryItem>
               <ItemTitle>Статус:</ItemTitle>
@@ -64,7 +75,9 @@ export default () =>
             </SummaryItem>
             <SummaryItem>
               <ItemTitle>Цены:</ItemTitle>
-              <Value>от 5.3 до 143.5 млн</Value>
+              <Value>
+                от {formatPrice(props.from)} млн до {formatPrice(props.to)} млн
+              </Value>
             </SummaryItem>
           </Col>
           <Col xs={4}>
