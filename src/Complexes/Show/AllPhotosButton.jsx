@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { declenNum } from '../../utils';
+import Pluralizer from './../../components/Pluralizer';
 
 const Button = styled.button`
   padding-top: 0.5rem;
@@ -21,5 +21,10 @@ const Button = styled.button`
 export default props =>
   (<Button>
     {props.images.length}{' '}
-    {declenNum(['фотография', 'фотографии', 'фотографий'], props.images.length)}
+    <Pluralizer
+      numeral={props.images.length}
+      one="фотография"
+      few="фотографии"
+      other="фотографий"
+    />
   </Button>);

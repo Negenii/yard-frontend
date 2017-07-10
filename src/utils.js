@@ -19,13 +19,11 @@ export function getImageUrl(id, size = 512) {
 }
 
 // function declension of numerals
-export function declenNum(titles) {
+export function declenNum(declensions, numeral): string {
   const cases = [2, 0, 1, 1, 1, 2];
-  return function curry(number) {
-    return titles[
-      number % 100 > 4 && number % 100 < 20 ? 2 : cases[number % 10 < 5 ? number % 10 : 5]
-    ];
-  };
+  return `${declensions[
+    numeral % 100 > 4 && numeral % 100 < 20 ? 2 : cases[numeral % 10 < 5 ? numeral % 10 : 5]
+  ]}`;
 }
 
 export function formatPrice(price = 0) {
