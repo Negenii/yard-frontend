@@ -23,9 +23,8 @@ class List extends Component {
   state = { complexes: [] };
 
   componentDidMount() {
-    get('complexes?filter%5Bstate%5D=public').then(({ items: complexes = [] }) => {
+    get(encodeURI('complexes?filter[state]=public')).then(({ items: complexes = [] }) => {
       this.setState({ complexes });
-      console.log(complexes);
     });
   }
 
