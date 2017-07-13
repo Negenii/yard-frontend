@@ -60,7 +60,7 @@ type Props = {
 };
 
 export default ({ statistics = {}, details = {}, from, to }: Props) => {
-  const { security, propertyKind, constructionKind, ceilHeight = {} } = details;
+  const { security, propertyKind, constructionKind, ceilHeight = { from: 0, to: 0 } } = details;
   const { totalArea } = statistics;
 
   return (
@@ -105,7 +105,9 @@ export default ({ statistics = {}, details = {}, from, to }: Props) => {
               {ceilHeight.to &&
                 <SummaryItem>
                   <ItemTitle>Потолки</ItemTitle>
-                  <Value>{processRange(ceilHeight, true, 2)}м</Value>
+                  <Value>
+                    {processRange(ceilHeight, true, 2)}м
+                  </Value>
                 </SummaryItem>}
               {details.maintenanceCosts &&
                 <SummaryItem>

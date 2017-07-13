@@ -1,6 +1,6 @@
 // @flow
 /* eslint-disable import/prefer-default-export*/
-import type { LocationType } from './Complexes/types';
+import type { LocationType, RangeType } from './Complexes/types';
 
 export function formatAddress(location: LocationType = {}) {
   const address = [location.subLocalityName, location.street, location.house]
@@ -34,9 +34,9 @@ export function formatPrice(price: number = 0) {
 }
 
 // Displays higher number of range if true
-export function processRange(range = {}, higher = true, round = 0) {
-  const to = range.to;
-  const from = range.from;
+export function processRange(range: RangeType, higher: boolean = true, round: number = 0) {
+  const to = range.to || 0;
+  const from = range.from || 0;
   if (higher === true) {
     return (to || from).toFixed(round);
   } else if (higher === false) {
