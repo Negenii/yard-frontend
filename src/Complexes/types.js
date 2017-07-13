@@ -1,5 +1,10 @@
 /* @flow */
 
+export type RangeType = {
+  from: number,
+  to: number,
+};
+
 export type LocationType = {
   latitude?: number,
   localityId?: number,
@@ -85,6 +90,21 @@ export type ComplexType = {
     playgrounds: number,
   },
   name: string,
+  details: {
+    architect?: string,
+    developer?: string,
+    startYear?: number,
+    startQuarter?: string,
+    commissioningYear?: number,
+    commissioningQuarter?: string,
+    ceilHeight?: RangeType,
+    parkings?: number,
+    maintenanceCosts?: number,
+    propertyKind?: string,
+    security?: string,
+    undergroundGarages?: string,
+    constructionKind?: string,
+  },
   updatedAt: string,
   location: LocationType,
   state: string,
@@ -106,4 +126,20 @@ export type ComplexType = {
   createdAt: string,
   images: ImagesType,
   accreditors: Array<number>,
+};
+
+export type DetailsType = {
+  architect?: string,
+  developer?: string,
+  startYear?: number,
+  startQuarter?: string,
+  commissioningYear?: number,
+  commissioningQuarter?: string,
+  ceilHeight?: RangeType,
+  parkings?: number,
+  maintenanceCosts?: number,
+  propertyKind?: string,
+  security?: string,
+  undergroundGarages?: string,
+  constructionKind?: string,
 };

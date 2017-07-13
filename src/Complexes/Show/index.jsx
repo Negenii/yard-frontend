@@ -11,7 +11,7 @@ import Area from './Area';
 import Map from './Map';
 import { formatAddress } from '../../utils';
 import get from '../../api';
-import type { ComplexType, StatisticsType } from '../types';
+import type { ComplexType, StatisticsType, DetailsType } from '../types';
 
 class Show extends Component {
   state = {};
@@ -24,9 +24,10 @@ class Show extends Component {
     });
   }
   statistics: StatisticsType;
+  details: DetailsType;
 
   render() {
-    const { name, images = [], location = {}, statistics = {} } = this.state;
+    const { name, images = [], location = {}, statistics = {}, details = {} } = this.state;
     const { price = {} } = statistics;
     const { from = {}, to = {} } = price;
 
@@ -35,7 +36,7 @@ class Show extends Component {
         <Heading title={name} address={formatAddress(location)} />
         <Gallery images={images} />
         <Info />
-        <Summary statistics={statistics} from={from.rub} to={to.rub} />
+        <Summary statistics={statistics} details={details} from={from.rub} to={to.rub} />
         <Description />
         <Infrastructure />
         <Offers name={name} statistics={statistics} />

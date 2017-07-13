@@ -32,3 +32,15 @@ export function declenNum(declensions: Array<string>, numeral: number = 0): stri
 export function formatPrice(price: number = 0) {
   return Math.round(price / 1000000) / 10;
 }
+
+// Displays higher number of range if true
+export function processRange(range = {}, higher = true, round = 0) {
+  const to = range.to;
+  const from = range.from;
+  if (higher === true) {
+    return (to || from).toFixed(round);
+  } else if (higher === false) {
+    return (from || to).toFixed(round);
+  }
+  return 0;
+}

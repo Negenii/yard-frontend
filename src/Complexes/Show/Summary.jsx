@@ -2,10 +2,10 @@
 import React from 'react';
 import { Grid, Row, Col } from 'react-flexbox-grid';
 import styled from 'styled-components';
-import { formatPrice } from '../../utils';
+import { formatPrice, processRange } from '../../utils';
+import { securityKinds, kinds, constructionKinds, quarters } from '../dictionaries';
 
-import type { StatisticsType } from '../types';
-
+import type { StatisticsType, DetailsType } from '../types';
 
 const Summary = styled.section`
   background: #fff;
@@ -56,59 +56,91 @@ type Props = {
   statistics: StatisticsType,
   from: number,
   to: number,
+  details: DetailsType,
 };
 
-export default (props: Props) =>
-  (<Summary>
-    <Grid>
-      <Title>Характеристики</Title>
-      <SummaryWrapper>
-        <Row>
-          <Col xs={4}>
-            <SummaryItem>
-              <ItemTitle>Количество квартир: </ItemTitle>
-              <Value>{props.statistics.propertiesCount}</Value>
-            </SummaryItem>
-            <SummaryItem>
-              <ItemTitle>Статус:</ItemTitle>
-              <Value>Квартиры</Value>
-            </SummaryItem>
-            <SummaryItem>
-              <ItemTitle>Цены:</ItemTitle>
-              <Value>
-                от {formatPrice(props.from)} млн до {formatPrice(props.to)} млн
-              </Value>
-            </SummaryItem>
-          </Col>
-          <Col xs={4}>
-            <SummaryItem>
-              <ItemTitle>Количество квартир:</ItemTitle>
-              <Value>1 503</Value>
-            </SummaryItem>
-            <SummaryItem>
-              <ItemTitle>Количество квартир:</ItemTitle>
-              <Value>1 503</Value>
-            </SummaryItem>
-            <SummaryItem>
-              <ItemTitle>Количество квартир:</ItemTitle>
-              <Value>1 503</Value>
-            </SummaryItem>
-          </Col>
-          <Col xs={4}>
-            <SummaryItem>
-              <ItemTitle>Количество квартир:</ItemTitle>
-              <Value>1 503</Value>
-            </SummaryItem>
-            <SummaryItem>
-              <ItemTitle>Количество квартир:</ItemTitle>
-              <Value>1 503</Value>
-            </SummaryItem>
-            <SummaryItem>
-              <ItemTitle>Количество квартир:</ItemTitle>
-              <Value>1 503</Value>
-            </SummaryItem>
-          </Col>
-        </Row>
-      </SummaryWrapper>
-    </Grid>
-  </Summary>);
+export default ({ statistics = {}, details = {}, from, to }: Props) => {
+  const { security, propertyKind, constructionKind, ceilHeight = {} } = details;
+  const { totalArea } = statistics;
+
+  return (
+    <Summary>
+      <Grid>
+        <Title>Характеристики</Title>
+        <SummaryWrapper>
+          <Row>
+            <Col xs={4}>
+              <SummaryItem>
+                <ItemTitle>Количество квартир</ItemTitle>
+                <Value>{statistics.propertiesCount}</Value>
+              </SummaryItem>
+              {security &&
+                <SummaryItem>
+                  <ItemTitle>Безопасность</ItemTitle>
+                  <Value>{securityKinds[security]}</Value>
+                </SummaryItem>}
+              <SummaryItem>
+                <ItemTitle>Цены</ItemTitle>
+                <Value>
+                  от {formatPrice(from)} млн до {formatPrice(to)} млн
+                </Value>
+              </SummaryItem>
+            </Col>
+            <Col xs={4}>
+              {propertyKind &&
+                <SummaryItem>
+                  <ItemTitle>Тип</ItemTitle>
+                  <Value>{kinds[propertyKind]}</Value>
+                </SummaryItem>}
+              {constructionKind &&
+                <SummaryItem>
+                  <ItemTitle>Конструкция корпусов</ItemTitle>
+                  <Value>{constructionKinds[constructionKind]}</Value>
+                </SummaryItem>}
+              {totalArea &&
+                <SummaryItem>
+                  <ItemTitle>Площадь</ItemTitle>
+                  <Value>{totalArea.from}м² – {totalArea.to}м²</Value>
+                </SummaryItem>}
+              {ceilHeight.to &&
+                <SummaryItem>
+                  <ItemTitle>Потолки</ItemTitle>
+                  <Value>{processRange(ceilHeight, true, 2)}м</Value>
+                </SummaryItem>}
+              {details.maintenanceCosts &&
+                <SummaryItem>
+                  <ItemTitle>Обслуживание</ItemTitle>
+                  <Value>{details.maintenanceCosts}₽ /м² / месяц</Value>
+                </SummaryItem>}
+            </Col>
+            <Col xs={4}>
+              {details.startQuarter &&
+                <SummaryItem>
+                  <ItemTitle>Начало строительства</ItemTitle>
+                  <Value>{quarters[details.startQuarter]} квартал {details.startYear} года</Value>
+                </SummaryItem>}
+              {details.commissioningQuarter &&
+                <SummaryItem>
+                  <ItemTitle>Конец строительства</ItemTitle>
+                  <Value>
+                    {quarters[details.commissioningQuarter]} квартал {details.commissioningYear}{' '}
+                    года
+                  </Value>
+                </SummaryItem>}
+              <SummaryItem>
+                <ItemTitle>Наземная парковка</ItemTitle>
+                <Value>{details.parkings ? `${details.parkings} м/м` : 'нет'}</Value>
+              </SummaryItem>
+              <SummaryItem>
+                <ItemTitle>Подземная парковка</ItemTitle>
+                <Value>
+                  {details.undergroundGarages ? `${details.undergroundGarages} м/м` : 'нет'}
+                </Value>
+              </SummaryItem>
+            </Col>
+          </Row>
+        </SummaryWrapper>
+      </Grid>
+    </Summary>
+  );
+};
