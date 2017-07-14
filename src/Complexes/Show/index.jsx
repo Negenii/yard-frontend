@@ -32,7 +32,7 @@ class Show extends Component {
     const { from = {}, to = {} } = price;
 
     return (
-      <div>
+      <main>
         <Heading title={name} address={formatAddress(location)} />
         <Gallery images={images} />
         <Info />
@@ -42,7 +42,7 @@ class Show extends Component {
         <Offers name={name} statistics={statistics} />
         <Area />
         <Map />
-      </div>
+      </main>
     );
   }
 }

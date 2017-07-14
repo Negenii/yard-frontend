@@ -33,12 +33,12 @@ export function formatPrice(price: number = 0) {
   return Math.round(price / 1000000) / 10;
 }
 
-// Displays only one value from range if they're equal
+// Displays only one value from range if they're nearly equal
 export function processRange(range: RangeType, round: number = 0, units: string = '') {
   const { to, from } = range || 0;
 
   if (to.toFixed(round) === from.toFixed(round)) {
-    return to.toFixed(round);
+    return `to.toFixed(round)${units}`;
   }
   return `от ${from.toFixed(round)}${units} до ${to.toFixed(round)}${units}`;
 }
