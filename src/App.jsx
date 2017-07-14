@@ -16,9 +16,9 @@ const Body = styled.div`
 
 export default () =>
   (<Body>
-    <Header />
     <Router>
       <main>
+        <Header />
         <Helmet>
           <title>Compass Development</title>
         </Helmet>

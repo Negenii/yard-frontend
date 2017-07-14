@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import { Link } from 'react-router-dom';
 import { Grid } from 'react-flexbox-grid';
 import LogoImg from './compass-logo.svg';
 
@@ -22,7 +23,7 @@ const HeaderWrapper = styled.div`
   justify-content: space-between;
 `;
 
-const Logo = styled.img`
+const LogoLink = styled(Link)`
   margin-top: 1.25rem;
   margin-bottom: 1.25rem;
 `;
@@ -39,7 +40,9 @@ export default () =>
   (<Header>
     <Grid>
       <HeaderWrapper>
-        <Logo src={LogoImg} alt="compass-logo" />
+        <LogoLink to="/">
+          <img src={LogoImg} alt="compass-logo" />
+        </LogoLink>
         <Nav className="header-nav">
           <NavLink href="undefined">Купить</NavLink>
           <NavLink href="undefined">Снять</NavLink>
