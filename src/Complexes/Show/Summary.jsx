@@ -106,7 +106,7 @@ export default ({ statistics = {}, details = {}, from, to }: Props) => {
                 <SummaryItem>
                   <ItemTitle>Потолки</ItemTitle>
                   <Value>
-                    {processRange(ceilHeight, true, 2)}м
+                    {processRange(ceilHeight, 2)}м
                   </Value>
                 </SummaryItem>}
               {details.maintenanceCosts &&

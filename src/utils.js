@@ -34,13 +34,11 @@ export function formatPrice(price: number = 0) {
 }
 
 // Displays higher number of range if true
-export function processRange(range: RangeType, higher: boolean = true, round: number = 0) {
+export function processRange(range: RangeType, round: number = 0) {
   const to = range.to || 0;
   const from = range.from || 0;
-  if (higher === true) {
-    return (to || from).toFixed(round);
-  } else if (higher === false) {
-    return (from || to).toFixed(round);
+  if (to.toFixed(round) === from.toFixed(round)) {
+    return to.toFixed(round);
   }
-  return 0;
+  return `от ${to.toFixed(round)} до ${from.toFixed(round)}`;
 }
