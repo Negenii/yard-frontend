@@ -100,7 +100,7 @@ export default ({ statistics = {}, details = {}, from, to }: Props) => {
               {totalArea &&
                 <SummaryItem>
                   <ItemTitle>Площадь</ItemTitle>
-                  <Value>{totalArea.from}м² – {totalArea.to}м²</Value>
+                  <Value>от {Math.round(totalArea.from)} до {Math.round(totalArea.to)}м²</Value>
                 </SummaryItem>}
               {ceilHeight.to &&
                 <SummaryItem>
