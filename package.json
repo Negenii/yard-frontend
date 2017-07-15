@@ -34,7 +34,7 @@
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
     "flow": "flow",
-    "lint": "eslint src/ --ext .jsx --ext .js",
+    "lint": "eslint src --ext .jsx --ext .js",
     "precommit": "yarn lint",
     "prepush": "yarn lint",
     "deploy": "yarn build && cd build && now --public --name yarrr --alias yarrr"

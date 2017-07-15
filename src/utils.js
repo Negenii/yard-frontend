@@ -38,7 +38,7 @@ export function processRange(range: RangeType, round: number = 0, units: string 
   const { to, from } = range || 0;
 
   if (to.toFixed(round) === from.toFixed(round)) {
-    return `to.toFixed(round)${units}`;
+    return `to.toFixed(round){' '}${units}`;
   }
   return `от ${from.toFixed(round)} до ${to.toFixed(round)}{' '}${units}`;
 }
