@@ -9,7 +9,7 @@ cache:
     - flow-typed
 install:
   - yarn install
-  - yarn flow-typed install --overwrite
+  - yarn ./node_modules/.bin/flow-typed install --overwrite
 script:
   - yarn lint
   - yarn flow
