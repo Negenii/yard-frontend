@@ -1,8 +1,6 @@
 import React, { Component } from 'react';
-import BodyClassName from 'react-body-classname';
 import { Grid } from 'react-flexbox-grid';
 import styled from 'styled-components';
-
 import ComplexCard from './ComplexCard';
 import Banner from './Banner';
 import BannerText from './Banner/BannerText';
@@ -10,7 +8,7 @@ import { formatAddress, getImageUrl } from '../../utils';
 import get from '../../api';
 import type { ComplexType } from '../types';
 
-const Body = styled(BodyClassName)`
+const Main = styled.div`
   background-color: #eaebf0;
   background-image: url('images/background.png');
   background-size: 20px 10px;
@@ -24,7 +22,7 @@ class List extends Component {
   state: { complexes: Array<ComplexType> } = { complexes: [] };
 
   componentDidMount() {
-    get('complexes?filter%5Bstate%5D=public').then(({ items: complexes = [] }) => {
+    get('complexes?filter[state]=public').then(({ items: complexes = [] }) => {
       this.setState({ complexes });
     });
   }
@@ -32,7 +30,7 @@ class List extends Component {
   render() {
     const { complexes = [] } = this.state;
     return (
-      <Body>
+      <Main>
         <div>
           <Banner />
           <BannerText />
@@ -56,7 +54,7 @@ class List extends Component {
             </Grid>
           </Cards>
         </div>
-      </Body>
+      </Main>
     );
   }
 }

@@ -54,7 +54,6 @@ const Info = styled.p`
   margin-right: 2rem;
 `;
 
-
 type props = {
   id: number,
   imageUrl: string,

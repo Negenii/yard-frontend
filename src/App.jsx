@@ -16,15 +16,15 @@ const Body = styled.div`
 
 export default () =>
   (<Body>
-    <Header />
     <Router>
-      <main>
+      <div className="App">
+        <Header />
         <Helmet>
           <title>Compass Development</title>
         </Helmet>
         <Route exact path="/" component={List} />
         <Route path="/complex/:id" component={Show} />
-      </main>
+      </div>
     </Router>
     <Footer />
   </Body>);
